@@ -1,0 +1,10 @@
+/* style.css */
+.ui-header {
+  padding: 30px; }
+
+div {
+  width: 200px;
+  height: 200px;
+  color: blue;
+  border: 3px dotted orange; }
+
