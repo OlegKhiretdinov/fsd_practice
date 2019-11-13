@@ -22,40 +22,49 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
   ],
+  devtool: 'source-map',
   module: {
-    rules: [
+    rules: [{
+      test: /\.s[ac]ss$/,
+      use: [MiniCssExtractPlugin.loader,
       {
-        test: /\.s[ac]ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+        },
       },
       {
-        test: /\.pug$/,
-        loader: 'pug-loader',
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+        }
       },
-      {
-        test: /\.(png|jpe?g|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: './img',
-            },
-          },
-        ],
-      },
-      {
-        test:/\.(ttf|woff|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: './font',
-            },
-          },
-        ],
-      },
+      ],
+    },
+    {
+      test: /\.pug$/,
+      loader: 'pug-loader',
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: './img',
+        },
+      },],
+    },
+    {
+      test: /\.(ttf|woff|svg)$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: './font',
+        },
+      },],
+    },
     ],
   },
 };
