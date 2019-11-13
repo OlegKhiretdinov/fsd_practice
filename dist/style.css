@@ -1,10 +1,2 @@
-/* style.css */
-.ui-header {
-  padding: 30px; }
-
-div {
-  width: 200px;
-  height: 200px;
-  color: blue;
-  border: 3px dotted orange; }
+@font-face{font-family:'Quicksand';src:local("Quicksand") url(font/Quicksand-Regular.woff) format("woff"),url(font/Quicksand-Regular.ttf),format("truetype"),url(font/Quicksand-Regular.svg),format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'Montserrat';src:local("Montserrat"),url(font/Montserrat-Regular.woff) format("woff"),url(font/Montserrat-Regular.ttf) format("truetype"),url(font/Montserrat-Regular.svg) format("svg");font-weight:normal;font-style:normal}.ui-header{padding:30px;font-family:'Montserrat'}
 
