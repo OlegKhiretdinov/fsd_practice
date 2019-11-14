@@ -1,12 +1,18 @@
-input {
+.input {
   width: 320px;
   height: 44px;
   padding-left: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font: normal 14px/24px Montserrat, Serif;
   border: 1px solid $dark_shade_025;
   border-radius: 4px;
-  &:hover, &:active, .active {
+    &:hover, &:active {
     border-color: $dark_shade_050;
+  }
+  &_size-m {
+    width: 266px;
+  }
+  &_size-s {
+    width: 150px;
   }
 }

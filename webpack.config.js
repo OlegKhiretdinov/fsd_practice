@@ -16,7 +16,7 @@ module.exports = {
       filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/ui-form-element.pug',
+      template: './src/pages/ui-form-element.pug',
       filename: 'ui-form.html',
       inject: true,
     }),

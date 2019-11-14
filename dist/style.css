@@ -10,7 +10,7 @@
   font-weight: normal;
   font-style: normal; }
 
-body {
+.page {
   margin: 0;
   padding: 0;
   font: normal 14px/24px Montserrat, Serif;
@@ -24,19 +24,59 @@ body {
   border-radius: 4px;
   box-shadow: 0 0 0 25px; }
 
-input {
+.form__input-label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.input, .dropdown-input {
   width: 320px;
   height: 44px;
   padding-left: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font: normal 14px/24px Montserrat, Serif;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
-  input:hover, input:active, input .active {
+  .input:hover, .dropdown-input:hover, .input:active, .dropdown-input:active {
     border-color: rgba(31, 32, 65, 0.5); }
+  .input_size-m {
+    width: 266px; }
+  .input_size-s {
+    width: 150px; }
+
+.dropdown-input {
+  padding-right: 44px;
+  position: relative; }
+
+.dropdown-input::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  transform: rotate(45deg);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5); }
 
 .header-ui {
-  padding: 30px; }
+  padding: 30px;
+  background: transparent; }
+
+.main-ui {
+  width: 1440px; }
+
+.section-vertical {
+  width: 320px; }
+
+.ui-section-inner_m {
+  margin-bottom: 20px; }
+
+.ui-element-condition {
+  float: right; }
+
+.input__ui-active {
+  border-color: rgba(31, 32, 65, 0.5); }
 
 
 /*# sourceMappingURL=style.css.map*/

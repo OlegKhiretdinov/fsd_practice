@@ -11,9 +11,15 @@ $green: #6fcf97;
 @import './common.blocks/fonts/montserrat/montserrat.scss';
 
 // Common blocks
-@import './common.blocks/body/body.scss';
+@import './common.blocks/page/page.scss';
 @import './common.blocks/form/form.scss';
 @import './common.blocks/input/input.scss';
 
-// Header
-@import './project.blocks/header-ui/header-ui.scss';
+// Project blocks
+@import './project.blocks/dropdown-input/dropdown-input.scss';
+
+
+
+// UI Kit
+@import './project.blocks/ui.page/header-ui/header-ui.scss';
+@import './project.blocks/ui.page/ui-kit.scss';
