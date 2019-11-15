@@ -1,4 +1,3 @@
-//- +input({type: "", id: "", txtlabel: ""})(class="" form="" placeholder="")
 mixin input(options)
   if (options.id && options.txtlabel)
     label(for= options.id class="form__input-label")= options.txtlabel
@@ -6,3 +5,5 @@ mixin input(options)
     class!= attributes.class class="input"
     id= options.id
     placeholder!= attributes.placeholder)
+
+//- +input({type: "", id: "", txtlabel: ""})(class="" form="" placeholder="")

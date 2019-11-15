@@ -1,0 +1,19 @@
+include ../../../src/common.blocks/input/input.pug
+include ./dropdown__list/dropdown__list.pug
+
+mixin dropdown-input(input, listitem, button)
+  div.dropdown-input
+    +input({type: input.type, id: input.id, txtlabel: input.txtlabel})(class=input.classname form= placeholder=input.plaseholder)
+    +dropdown-list(listitem, button)
+
+//- +dropdown-input(
+//-     {
+//-       type: "",
+//-       id: "guest",
+//-       txtlabel: "dropdown",
+//-       classname: "select",
+//-       placeholder: "Сколько гостей"
+//-     },
+//-     ["odin", "dva", "tri"],
+//-     ['применить']
+//-   )

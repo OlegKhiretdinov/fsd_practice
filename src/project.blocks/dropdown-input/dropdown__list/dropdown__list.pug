@@ -1,0 +1,19 @@
+mixin dropdown-list(itemname, button)
+  div.dropdown__list
+    each val in itemname
+      div.dropdown__list-item
+        div.dropdown__list-item-name= val
+        .dropdown__list-item-count
+          .dropdown__list-item-count-minus
+          .dropdown__list-item-count-total
+          .dropdown__list-item-count-plus
+  .block-button
+    each val in button
+      button.dropdown-list__button= val
+
+
+
+//- +dropdown-list(
+//-   ['odin', 'dva'],
+//-   ['очистить', 'применить']
+//- )

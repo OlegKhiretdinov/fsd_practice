@@ -29,7 +29,7 @@
   font-weight: bold;
   text-transform: uppercase; }
 
-.input, .dropdown-input {
+.input {
   width: 320px;
   height: 44px;
   padding-left: 15px;
@@ -37,7 +37,7 @@
   font: normal 14px/24px Montserrat, Serif;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
-  .input:hover, .dropdown-input:hover, .input:active, .dropdown-input:active {
+  .input:hover, .input:active {
     border-color: rgba(31, 32, 65, 0.5); }
   .input_size-m {
     width: 266px; }
@@ -45,19 +45,7 @@
     width: 150px; }
 
 .dropdown-input {
-  padding-right: 44px;
   position: relative; }
-
-.dropdown-input::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 17px;
-  left: 17px;
-  transform: rotate(45deg);
-  border-right: 2px solid rgba(31, 32, 65, 0.5);
-  border-bottom: 2px solid rgba(31, 32, 65, 0.5); }
 
 .header-ui {
   padding: 30px;

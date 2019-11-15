@@ -3,15 +3,3 @@
   padding-right: 44px;
   position: relative;
 }
-
-.dropdown-input::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 17px;
-  left: 17px;
-  transform: rotate(45deg);
-  border-right: 2px solid $dark_shade_050;
-  border-bottom: 2px solid $dark_shade_050;
-}

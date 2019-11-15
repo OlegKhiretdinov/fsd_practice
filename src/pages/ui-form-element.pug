@@ -6,6 +6,7 @@ html(lang="ru")
   body.page
     include ../project.blocks/ui.page/header-ui/header-ui.pug
     include ../common.blocks/input/input.pug
+    include ../project.blocks/dropdown-input/dropdown-input.pug
     main.main-ui
       section.section-vertical
         div.ui-section-inner_m
@@ -16,8 +17,17 @@ html(lang="ru")
           +input({type: "text", id: "active-field", txtlabel: "text field"})(class="input__ui-active" placeholder="This is pretty awesome")
         div.ui-section-inner_m
           span.ui-element-condition default
-          +input({type: "text", id: "guest", txtlabel: "dropdown"})(class="dropdown-input" placeholder="Сколько гостей")
-      
+          +dropdown-input(
+            {
+              type: "text",
+              id: "guest",
+              txtlabel: "dropdown",
+              classname: "select",
+              placeholder: "Сколько гостей"
+            },
+            ["odin", "dva", "tri"],
+            ['применить']
+          )
       section.section-vertical
       section.section-vertical
 
