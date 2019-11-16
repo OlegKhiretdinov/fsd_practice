@@ -7,9 +7,10 @@ mixin dropdown-list(itemname, button)
           .dropdown__list-item-count-minus
           .dropdown__list-item-count-total
           .dropdown__list-item-count-plus
-  .block-button
-    each val in button
-      button.dropdown-list__button= val
+  if button
+    .block-button
+      each val in button
+        button.dropdown-list__button= val
 
 
 

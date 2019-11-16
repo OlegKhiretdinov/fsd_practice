@@ -4,6 +4,7 @@ mixin input(options)
   input(type= options.type
     class!= attributes.class class="input"
     id= options.id
-    placeholder!= attributes.placeholder)
+    placeholder!= attributes.placeholder
+    form!= attributes.form)
 
 //- +input({type: "", id: "", txtlabel: ""})(class="" form="" placeholder="")
