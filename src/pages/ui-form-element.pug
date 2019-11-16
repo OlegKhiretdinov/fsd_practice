@@ -18,16 +18,12 @@ html(lang="ru")
         div.ui-section-inner_m
           span.ui-element-condition default
           +dropdown-input(
-              {
-                type: "text",
-                id: "guest",
-                txtlabel: "dropdown",
-                classname: "select",
-                placeholder: "Сколько гостей"
-              },
-              ["odin", "dva", "tri"],
-              ['применить']
-            )
+            {
+              adult: "Взрослые",
+              child: "Дети"
+            },
+            ['очистить', 'применить']
+          )
       section.section-vertical
       section.section-vertical
 

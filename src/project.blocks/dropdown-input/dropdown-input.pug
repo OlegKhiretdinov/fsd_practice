@@ -1,20 +1,18 @@
-include ../../../src/common.blocks/input/input.pug
 include ./dropdown__list/dropdown__list.pug
 
-mixin dropdown-input(input, listitem, button)
+mixin dropdown-input(listitem, button)
   div.dropdown-field
-    +input({type: input.type, id: input.id, txtlabel: input.txtlabel})(class='dropdown-input '+input.classname form=input.form placeholder=input.placeholder)
+    .dropdown__count-total
+      p.dropdown__count-txt
+      label(for="dropdown-triger")
+      input(type="checkbox" class="dropdown__triger" id="dropdown-triger")
     +dropdown-list(listitem, button)
 
+
 //- +dropdown-input(
-//-     {
-//-       type: "text",
-//-       form: "forme-name",
-//-       id: "guest",
-//-       txtlabel: "dropdown",
-//-       classname: "classname",
-//-       placeholder: "Сколько гостей"
-//-     },
-//-     ["odin", "dva", "tri"],
-//-     ['применить']
-//-   )
+//-   {
+//-     adult: "Взрослые",
+//-     child: "Дети"
+//-   },
+//-   ['очистить', 'применить']
+//- )

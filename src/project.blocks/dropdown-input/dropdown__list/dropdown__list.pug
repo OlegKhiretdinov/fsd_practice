@@ -1,11 +1,21 @@
-mixin dropdown-list(itemname, button)
+include ../../../common.blocks/input/input.pug
+mixin dropdown-list(item, button)
   div.dropdown__list
-    each val in itemname
+    each label, name in item
       div.dropdown__list-item
-        div.dropdown__list-item-name= val
+        div.form__input-label= label
         .dropdown__list-item-count
           .dropdown__list-item-count-minus
-          .dropdown__list-item-count-total
+          +input(
+            {
+              type: "tetx",
+              name: name,
+              form:"",
+            }
+          )(
+            class="dropdown__input-count"
+            placeholder="0"
+          )
           .dropdown__list-item-count-plus
   if button
     .block-button
@@ -15,6 +25,9 @@ mixin dropdown-list(itemname, button)
 
 
 //- +dropdown-list(
-//-   ['odin', 'dva'],
+//-   {
+//-     adult: "Взрослые",
+//-     child: "Дети"
+//-   },
 //-   ['очистить', 'применить']
 //- )

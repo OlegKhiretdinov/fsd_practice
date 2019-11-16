@@ -2,9 +2,22 @@ mixin input(options)
   if (options.id && options.txtlabel)
     label(for= options.id class="form__input-label")= options.txtlabel
   input(type= options.type
+    name= options.name
+    form= options.form
     class!= attributes.class class="input"
     id= options.id
     placeholder!= attributes.placeholder
-    form!= attributes.form)
+    )
 
-//- +input({type: "", id: "", txtlabel: ""})(class="" form="" placeholder="")
+//- +input(
+//-   {
+//-     type: "",
+//-     name:"",
+//-     form:"",
+//-     id: "",
+//-     txtlabel: ""
+//-   }
+//- )(
+//-   class=""
+//-   placeholder=""
+//- )
