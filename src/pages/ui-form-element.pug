@@ -4,19 +4,41 @@ html(lang="ru")
     include ../blocks/head/head.pug
     title ui form element
   body.page
-    include ../blocks/ui-kit/ui-kit__header/ui-kit__header.pug
+    include ../blocks/ui-kit/__header/ui-kit__header.pug
     include ../blocks/input/input.pug
     include ../blocks/dropdown-input/dropdown-input.pug
-    main.main-ui
-      section.section-vertical
-        div.ui-section-inner_m
-          span.ui-element-condition default
-          +input({type: "text", id: "email", txtlabel: "text field"})(placeholder="Email")
-        div.ui-section-inner_m
-          span.ui-element-condition hover/active
-          +input({type: "text", id: "active-field", txtlabel: "text field"})(class="input__ui-active" placeholder="This is pretty awesome")
-        div.ui-section-inner_m
-          span.ui-element-condition default
+    main.ui-kit
+      section.ui-kit__section-vertical
+        div.ui-kit__section-inner_m 
+          span.ui-kit__elemlnt-condition default
+          +input(
+            {
+              type: "text",
+              name:"",
+              form:"",
+              id: "email",
+              txtlabel: "text field",
+              classlabel: "input__label",
+              classinput: "input",
+              placeholder: "Email",
+            }
+          )
+        div.ui-kit__section-inner_m 
+          span.ui-kit__elemlnt-condition hover/active
+          +input(
+            {
+              type: "text",
+              name:"",
+              form:"",
+              id: "active-field",
+              txtlabel: "text field",
+              classlabel: "input__label",
+              classinput: "input ui-kit__input-active",
+              placeholder: "This is pretty awesome",
+            }
+          )
+        div.ui-kit__section-inner_m 
+          span.ui-kit__elemlnt-condition default
           +dropdown-input(
             {
               adult: "Взрослые",
@@ -24,11 +46,11 @@ html(lang="ru")
             },
             ['очистить', 'применить']
           )
-      section.section-vertical
-      section.section-vertical
+      section.ui-kit__section-vertical
+      section.ui-kit__section-vertical
 
-      section.section-vertical
-      section.section-vertical
-      section.section-vertical
+      section.ui-kit__section-vertical
+      section.ui-kit__section-vertical
+      section.ui-kit__section-vertical
 
       section.section-horizont

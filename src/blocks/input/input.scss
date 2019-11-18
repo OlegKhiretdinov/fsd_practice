@@ -11,10 +11,6 @@
     border-color: $dark_shade_050;
     color: $dark_shade_075;
   }
-  &_size-m {
-    width: 266px;
-  }
-  &_size-s {
-    width: 150px;
-  }
 }
+
+@import '../../../src/blocks/input/__label/input__label.scss';

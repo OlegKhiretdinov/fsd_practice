@@ -1,22 +1,9 @@
-@import '../../../src/blocks/ui-kit/ui-kit__header/ui-kit__header.scss';
+@import '../../../src/blocks/ui-kit/__header/ui-kit__header.scss';
+@import '../../../src/blocks/ui-kit/__section-vertical/ui-kit__section-vertical.scss';
+@import '../../../src/blocks/ui-kit/__input-active/ui-kit__input-active.scss';
+@import '../../../src/blocks/ui-kit/__element-condition/ui-kit__element-condition.scss';
+@import '../../../src/blocks/ui-kit/__section-inner/_m/ui-kit__section-inner_m.scss';
 
-.main-ui {
+.ui-kit {
   width: 1440px;
-}
-
-.section-vertical {
-  width: 320px;
-}
-
-.ui-section-inner_m{
-  margin-bottom: 20px;
-}
-
-.ui-element-condition {
-  float: right;
-}
-
-.input__ui-active {
-  border-color: $dark_shade_050;
-  color: $dark_shade_075;
 }

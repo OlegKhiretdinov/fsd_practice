@@ -1,8 +1,8 @@
-.dropdown-field {
+.dropdown-input {
   position: relative;
 }
 
-.dropdown-input {
+.dropdown-input__ {
   @extend .input;
   padding-right: 44px;
   color: $dark_shade_075;

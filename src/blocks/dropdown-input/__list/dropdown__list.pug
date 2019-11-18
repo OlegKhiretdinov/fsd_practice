@@ -5,7 +5,7 @@ mixin dropdown-list(item, button)
       div.dropdown__list-item
         div.form__input-label= label
         .dropdown__list-item-count
-          .dropdown__list-item-count-minus
+          .dropdown__list-item-count_minus
           +input(
             {
               type: "tetx",
@@ -16,7 +16,7 @@ mixin dropdown-list(item, button)
             class="dropdown__input-count"
             placeholder="0"
           )
-          .dropdown__list-item-count-plus
+          .dropdown__list-item-count_plus
   if button
     .block-button
       each val in button

@@ -1,0 +1,27 @@
+include ../../input/input.pug
+mixin dropdown-input__item(item)
+  each label, name in item
+    div.dropdown-input__item
+    div
+      p= label
+    div
+      div.dropdown-input__item-count_minus
+      div.dropdown-input__item-count
+        +input(
+          {
+            type: "text",
+            name:name,
+            form:"",
+            classinput: "input",
+            placeholder: "0",
+          }
+        )
+      div.dropdown-input__item-count_plus
+
+
+//- +dropdown-input__item(
+//-   {
+//-     adult: "взрослые",
+//-     child: "дети",
+//-   }
+//- )

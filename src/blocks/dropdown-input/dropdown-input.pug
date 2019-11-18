@@ -1,11 +1,11 @@
 include dropdown__list/dropdown__list.pug
 
 mixin dropdown-input(listitem, button)
-  div.dropdown-field
+  div.dropdown-input
     .dropdown__count-total
       p.dropdown__count-txt
       label(for="dropdown-triger")
-      input(type="checkbox" class="dropdown__triger" id="dropdown-triger")
+      
     +dropdown-list(listitem, button)
 
 
