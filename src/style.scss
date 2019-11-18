@@ -7,19 +7,19 @@ $purple: #bc9cff;
 $green: #6fcf97;
 
 // Fonts
-@import './common.blocks/fonts/quicksand/quicksand.scss';
-@import './common.blocks/fonts/montserrat/montserrat.scss';
+@import './blocks/fonts/quicksand/quicksand.scss';
+@import './blocks/fonts/montserrat/montserrat.scss';
 
 // Common blocks
-@import './common.blocks/page/page.scss';
-@import './common.blocks/form/form.scss';
-@import './common.blocks/input/input.scss';
+@import './blocks/page/page.scss';
+@import './blocks/form/form.scss';
+@import './blocks/input/input.scss';
 
 // Project blocks
-@import './project.blocks/dropdown-input/dropdown-input.scss';
+@import './blocks/dropdown-input/dropdown-input.scss';
 
 
 
 // UI Kit
-@import './project.blocks/ui.page/header-ui/header-ui.scss';
-@import './project.blocks/ui.page/ui-kit.scss';
+// @import './blocks/ui.page/header-ui/header-ui.scss';
+@import './blocks/ui-kit/ui-kit.scss';

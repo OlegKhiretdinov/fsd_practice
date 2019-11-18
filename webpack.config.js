@@ -27,18 +27,18 @@ module.exports = {
     rules: [{
       test: /\.s[ac]ss$/,
       use: [MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader',
-        options: {
-          sourceMap: true,
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
         },
-      },
-      {
-        loader: 'sass-loader',
-        options: {
-          sourceMap: true,
-        }
-      },
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+          }
+        },
       ],
     },
     {
@@ -47,13 +47,15 @@ module.exports = {
     },
     {
       test: /\.(png|jpe?g|gif)$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: './img',
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: './img',
+          },
         },
-      },],
+      ],
     },
     {
       test: /\.(ttf|woff|svg)$/,
