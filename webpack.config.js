@@ -20,9 +20,13 @@ module.exports = {
       filename: 'ui-form.html',
       inject: true,
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
   ],
   devtool: 'source-map',
+  devServer: {
+    stats: 'errors-only',
+    contentBase: path.join(__dirname, 'dist')
+  },
   module: {
     rules: [{
       test: /\.s[ac]ss$/,
