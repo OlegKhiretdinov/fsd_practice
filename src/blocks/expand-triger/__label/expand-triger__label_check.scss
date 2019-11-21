@@ -1,9 +1,9 @@
 .expand-triger__label_check:after  {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   position: absolute;
-  top: calc(50% - 10px);
+  top: calc(50% - 7px);
   right: 15px;
   border-right: 2px solid $dark_shade_050;
   border-bottom: 2px solid $dark_shade_050;

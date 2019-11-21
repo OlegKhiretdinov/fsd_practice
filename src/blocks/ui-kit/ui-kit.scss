@@ -5,5 +5,8 @@
 @import '../../../src/blocks/ui-kit/__section-inner/_m/ui-kit__section-inner_m.scss';
 
 .ui-kit {
+  margin: 0 auto;
+  padding: 23px 141px 130px;
   width: 1440px;
+  box-sizing: border-box;
 }
