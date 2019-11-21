@@ -40,11 +40,15 @@ html(lang="ru")
         div.ui-kit__section-inner_m 
           span.ui-kit__elemlnt-condition default
           +dropdown-input(
+            "dropdown",
             {
-              adult: "Взрослые",
-              child: "Дети"
+              adult: "взрослые",
+              child: "дети",
+              minichild: "младенцы",
             },
-            ['очистить', 'применить']
+            ['очистить', 'применить'],
+            'check',
+            'Сколько гостей'
           )
       section.ui-kit__section-vertical
       section.ui-kit__section-vertical

@@ -1,9 +1,14 @@
 .dropdown-input {
-  position: relative;
-}
-
-.dropdown-input__ {
   @extend .input;
-  padding-right: 44px;
+  height: auto;
+  position: relative;
+  border-radius: 4px 4px 0 0;
   color: $dark_shade_075;
 }
+
+@import './__item-list/dropdown-input__item-list.scss';
+@import './__item/dropdown-input__item.scss';
+@import './__item-count/dropdown-input__item-count.scss';
+@import './__item-inner/dropdown-input__item-inner.scss';
+@import './__button/dropdown-input__button.scss';
+@import './__button-block/dropdown-input__button-block.scss';

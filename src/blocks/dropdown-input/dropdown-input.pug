@@ -1,18 +1,24 @@
-include dropdown__list/dropdown__list.pug
+include __button/dropdown-input__button.pug
+include __item/dropdown-input__item.pug
+include ../expand-triger/expand-triger.pug
 
-mixin dropdown-input(listitem, button)
+mixin dropdown-input(label, listitem, button, trigerclass, labelText)
+  span.input__label= label
   div.dropdown-input
-    .dropdown__count-total
-      p.dropdown__count-txt
-      label(for="dropdown-triger")
-      
-    +dropdown-list(listitem, button)
+    +expand-triger(trigerclass, labelText)
+    .dropdown-input__item-list
+      +dropdown-input__item(listitem)
+      +dropdown-input__button(button)
+
 
 
 //- +dropdown-input(
+//-   "field name",
 //-   {
-//-     adult: "Взрослые",
-//-     child: "Дети"
+//-     adult: "взрослые",
+//-     child: "дети",
 //-   },
-//-   ['очистить', 'применить']
+//-   ['очистить', 'применить'],
+//-   'check||burger||pointer',
+//-   'field default text'
 //- )

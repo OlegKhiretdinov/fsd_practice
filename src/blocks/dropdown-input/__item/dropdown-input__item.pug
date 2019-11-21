@@ -2,21 +2,19 @@ include ../../input/input.pug
 mixin dropdown-input__item(item)
   each label, name in item
     div.dropdown-input__item
-    div
-      p= label
-    div
-      div.dropdown-input__item-count_minus
-      div.dropdown-input__item-count
+      div= label
+      div.dropdown-input__item-inner
+        div.dropdown-input__item-count_minus
         +input(
           {
             type: "text",
             name:name,
             form:"",
-            classinput: "input",
+            classinput: "dropdown-input__item-count",
             placeholder: "0",
           }
         )
-      div.dropdown-input__item-count_plus
+        div.dropdown-input__item-count_plus
 
 
 //- +dropdown-input__item(

@@ -1,0 +1,9 @@
+.dropdown-input__button-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.dropdown-input__button-block .dropdown-input__button:first-child {
+  color: $dark_shade_050;
+}

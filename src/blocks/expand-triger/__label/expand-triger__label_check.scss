@@ -1,0 +1,11 @@
+.expand-triger__label_check:after  {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 15px;
+  border-right: 2px solid $dark_shade_050;
+  border-bottom: 2px solid $dark_shade_050;
+  transform: rotate(45deg);
+}
