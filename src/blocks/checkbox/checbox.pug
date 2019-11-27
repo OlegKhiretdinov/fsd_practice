@@ -1,0 +1,27 @@
+mixin checkbox(checkbox, label)
+  input(type="chekbox"
+    name= checkbox.name
+    value=checkbox.value
+    id=checkbox.id
+    class=`checkbox ${checkbox.class}`
+    checked= (checkbox.checked ? "checked" : andefined)
+  )
+  label(for=checkbox.id
+    class=`checkbox-label ${label.class}`
+  )= label.txt
+
+
+
+//- +checkbox(
+//-   {
+//-     name: "fmvk",
+//-     value: "vaaaal",
+//-     id: "iditifikator",
+//-     class: "more class",
+//-     checked: 0,
+//-   },
+//-   {
+//-   txt: "label",
+//-   class: "more label class"
+//-   }
+//- )
