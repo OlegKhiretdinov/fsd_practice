@@ -1,0 +1,21 @@
+.checkbox__label {
+  display: block;
+  padding-left: 30px;
+  position: relative;
+}
+
+.checkbox__label:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $dark_shade_025;
+  border-radius: 4px;
+}
+
+.checkbox:checked ~ .checkbox__label:before {
+  border-color: $purple;
+}

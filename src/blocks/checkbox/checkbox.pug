@@ -1,5 +1,5 @@
 mixin checkbox(checkbox, label)
-  input(type="chekbox"
+  input(type="checkbox"
     name= checkbox.name
     value=checkbox.value
     id=checkbox.id
@@ -7,8 +7,9 @@ mixin checkbox(checkbox, label)
     checked= (checkbox.checked ? "checked" : andefined)
   )
   label(for=checkbox.id
-    class=`checkbox-label ${label.class}`
-  )= label.txt
+    class=`checkbox__label ${label.class}`
+  )
+    span.checkbox__label-txt= label.txt
 
 
 
