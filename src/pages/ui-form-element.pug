@@ -8,6 +8,8 @@ html(lang="ru")
     include ../blocks/input/input.pug
     include ../blocks/dropdown-input/dropdown-input.pug
     include ../blocks/checkbox/checkbox.pug
+    include ../blocks/radiobutton/radiobutton.pug
+    include ../blocks/toggle/toggle.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -91,6 +93,60 @@ html(lang="ru")
             },
             {
             txt: "Можно пригласить гостей (до 10 человек)",
+            class: ""
+            }
+          )
+        div.ui-kit__section-inner_m
+          +radiobutton(
+            {
+              name: "gender",
+              value: "man",
+              id: "man",
+              class: "",
+              checked: 1,
+            },
+            {
+            txt: "Мужчина",
+            class: ""
+            }
+          )
+          +radiobutton(
+            {
+              name: "gender",
+              value: "woman",
+              id: "woman",
+              class: "",
+              checked: 0,
+            },
+            {
+            txt: "Женщина",
+            class: "more label class"
+            }
+          )
+        div.ui-kit__section-inner_m
+          +toggle(
+            {
+              name: "toggle1",
+              value: "sale",
+              id: "spec-offer-da",
+              class: "",
+              checked: 1,
+            },
+            {
+            txt: "Получать спец предложения",
+            class: ""
+            }
+          )
+          +toggle(
+            {
+              name: "toggle2",
+              value: "sale",
+              id: "spec-offer-net",
+              class: "",
+              checked: 0,
+            },
+            {
+            txt: "Получать спец предложения",
             class: ""
             }
           )
