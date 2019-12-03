@@ -1,7 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -20,7 +21,19 @@ module.exports = {
       filename: 'ui-form.html',
       inject: true,
     }),
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
+    // new CopyPlugin([
+    //   {
+    //     from: 'src/blocks/*/*.svg',
+    //     to: 'font1/',
+    //     ignore: 'src/blocks/fonts/*/*.svg',
+    //   },
+    //   {
+    //     from: 'src/blocks/*/*/*.svg',
+    //     to: 'font1/',
+
+    //   },
+    // ]),
   ],
   devtool: 'source-map',
   devServer: {
@@ -56,18 +69,29 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: './img',
+            outputPath: 'img',
           },
         },
       ],
     },
     {
-      test: /\.(ttf|woff|svg)$/,
+      test: /\.(ttf|woff)$/,
       use: [{
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: './font',
+          outputPath: 'font/',
+        },
+      },],
+    },
+    {
+      test: /\.svg$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          regExp: /fonts\/([a-z0-9]+)\/[a-z0-9]+\.svg$/,
+          name: '[name].[ext]',
+          outputPath: 'svg',
         },
       },],
     },
