@@ -1,8 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -21,19 +20,7 @@ module.exports = {
       filename: 'ui-form.html',
       inject: true,
     }),
-    new CleanWebpackPlugin(),
-    // new CopyPlugin([
-    //   {
-    //     from: 'src/blocks/*/*.svg',
-    //     to: 'font1/',
-    //     ignore: 'src/blocks/fonts/*/*.svg',
-    //   },
-    //   {
-    //     from: 'src/blocks/*/*/*.svg',
-    //     to: 'font1/',
-
-    //   },
-    // ]),
+    // new CleanWebpackPlugin(),
   ],
   devtool: 'source-map',
   devServer: {

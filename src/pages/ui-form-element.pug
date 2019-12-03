@@ -10,6 +10,7 @@ html(lang="ru")
     include ../blocks/checkbox/checkbox.pug
     include ../blocks/radiobutton/radiobutton.pug
     include ../blocks/toggle/toggle.pug
+    include ../blocks/like-button/like-button.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -150,6 +151,10 @@ html(lang="ru")
             class: ""
             }
           )
+        div.ui-kit__section-inner_m
+          +like-button(0,2)
+        div.ui-kit__section-inner_m
+          +like-button(1,12)
       section.ui-kit__section-vertical
 
       section.ui-kit__section-vertical

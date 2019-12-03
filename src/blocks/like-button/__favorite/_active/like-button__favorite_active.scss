@@ -1,0 +1,4 @@
+.like-button__favorite_active {
+  @extend .like-button__favorite;
+  background: url(blocks/like-button/__favorite/_active/favorite_active.svg) no-repeat center;;
+}
