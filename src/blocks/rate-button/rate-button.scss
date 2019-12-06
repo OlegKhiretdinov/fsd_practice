@@ -1,0 +1,8 @@
+.rate-button {
+  display: inline-block;
+  width: 120px;
+  height: 24px;
+}
+
+@import './__star/rate-button__star.scss';
+@import './__star/_fill/rate-button__star_fill.scss';

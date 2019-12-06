@@ -11,6 +11,7 @@ html(lang="ru")
     include ../blocks/radiobutton/radiobutton.pug
     include ../blocks/toggle/toggle.pug
     include ../blocks/like-button/like-button.pug
+    include ../blocks/rate-button/rate-button.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -155,6 +156,9 @@ html(lang="ru")
           +like-button(0,2)
         div.ui-kit__section-inner_m
           +like-button(1,12)
+        div.ui-kit__section-inner_m.ui-kit__rate-line
+          +rate-button(4)
+          +rate-button(5)
       section.ui-kit__section-vertical
 
       section.ui-kit__section-vertical
