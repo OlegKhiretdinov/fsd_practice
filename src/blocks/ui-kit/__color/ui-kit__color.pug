@@ -1,0 +1,18 @@
+mixin color(colorDescritpion)
+  each colorCode, colorTitle in colorDescritpion
+    div.ui-kit__color-description
+      div(class='color-example u-k__' + colorCode.variable)
+      .color-description
+        span.sub-title= colorTitle
+        br
+        span.ui-kit__hex= colorCode.hex
+
+
+//- +color(
+//-   {
+//-     'Dark Shade 100%': {
+//-       variable: 'title-color',
+//-       hex:'#1F2041'
+//-     },
+//-   }
+//- )

@@ -3,7 +3,7 @@ include __item/dropdown-input__item.pug
 include ../expand-triger/expand-triger.pug
 
 mixin dropdown-input(label, listitem, button, trigerclass, labelText)
-  span.input__label= label
+  span.label-cta= label
   div.dropdown-input
     +expand-triger(trigerclass, labelText)
     .dropdown-input__item-list
