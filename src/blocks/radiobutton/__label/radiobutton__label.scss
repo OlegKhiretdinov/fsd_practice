@@ -19,11 +19,11 @@
   height: 20px;
   top: calc(50% - 10px);
   left: 0;
-  border: 1px solid $dark_shade_025;
+  border: 1px solid $dark_shade_25;
 }
 
 .radiobutton:checked + .radiobutton__label:before {
-  border-color: $purple;
+  border-color: $main-color;
 }
 
 .radiobutton:checked + .radiobutton__label:after {

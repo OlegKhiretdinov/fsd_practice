@@ -16,6 +16,11 @@ module.exports = {
       filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
+      template: './src/pages/color-type.pug',
+      filename: 'color-type.html',
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
       template: './src/pages/ui-form-element.pug',
       filename: 'ui-form.html',
       inject: true,

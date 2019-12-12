@@ -1,7 +1,7 @@
 .dropdown-input__item-count_minus {
   width: 30px;
   height: 30px;
-  border: 1px solid $dark_shade_050;
+  border: 1px solid $dark_shade_50;
   border-radius: 50%;
   position: relative;
 }
@@ -11,6 +11,6 @@
   width: 6px;
   position: absolute;
   top: 15px;
-  border-top: 1px solid $dark_shade_050;
+  border-top: 1px solid $text-color;
   left: 12px;
 }

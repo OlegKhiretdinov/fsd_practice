@@ -1,7 +1,7 @@
 .dropdown-input__item-count_plus {
   width: 30px;
   height: 30px;
-  border: 1px solid $dark_shade_050;
+  border: 1px solid $dark_shade_50;
   border-radius: 50%;
   position: relative;
 }
@@ -13,8 +13,8 @@
   position: absolute;
   bottom: 14px;
   left: 14px;
-  border-bottom: 1px solid $dark_shade_050;
-  border-left: 1px solid $dark_shade_050;
+  border-bottom: 1px solid $dark_shade_50;
+  border-left: 1px solid $dark_shade_50;
 }
 
 .dropdown-input__item-count_plus:after {
@@ -24,6 +24,6 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  border-top: 1px solid $dark_shade_050;
-  border-right: 1px solid $dark_shade_050;
+  border-top: 1px solid $dark_shade_50;
+  border-right: 1px solid $dark_shade_50;
 }

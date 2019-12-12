@@ -4,12 +4,12 @@
   padding-left: 15px;
   box-sizing: border-box;
   font: normal 14px/24px Montserrat, Serif;
-  border: 1px solid $dark_shade_025;
+  border: 1px solid $dark_shade_25;
   border-radius: 4px;
-  color: $dark_shade_050;
+  color: $dark_shade_50;
     &:hover, &:active, &:focus {
-    border-color: $dark_shade_050;
-    color: $dark_shade_075;
+    border-color: $dark_shade_50;
+    color: $text-color;
   }
 }
 
