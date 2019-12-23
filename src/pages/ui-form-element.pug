@@ -12,6 +12,7 @@ html(lang="ru")
     include ../blocks/toggle/toggle.pug
     include ../blocks/like-button/like-button.pug
     include ../blocks/rate-button/rate-button.pug
+    include ../blocks/range-slider/range-slider.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -160,7 +161,8 @@ html(lang="ru")
           +rate-button(4)
           +rate-button(5)
       section.ui-kit__section-vertical
-
+        .ui-kit__section-inner_m
+          +range-slider('form', 'range-slider')
       section.ui-kit__section-vertical
       section.ui-kit__section-vertical
       section.ui-kit__section-vertical
