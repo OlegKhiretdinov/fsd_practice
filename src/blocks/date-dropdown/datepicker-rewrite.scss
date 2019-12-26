@@ -1,0 +1,64 @@
+.datepicker--cells {
+  justify-content: center;
+}
+
+.datepicker--cell-day {
+  width: 40px;
+  height: 40px;
+}
+
+.datepicker--cell.datepicker--cell-day.-current- {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  color: white;
+  border-radius: 50%;
+}
+
+.datepicker--cell.datepicker--cell-day {
+  &.-selected- {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 50%;
+    position: relative;
+    &.-range-from-:after,
+    &.-range-to-:after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      opacity: 0.25;
+      z-index: -1;
+    }
+    &.-range-from-:after {
+      right: 0;
+    }
+    &.-range-to-:after {
+      left: 0;
+    }
+  }
+
+  &.-in-range- {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+  }
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--day-name {
+  color: $main-color;
+  font: bold 14px/24px "Montserrat", sans-Serif
+}
+
+.datepicker--nav-action svg {
+  width: 17px;
+  height: 18px;
+}
+
+.datepicker--nav-action path {
+  fill: #BC9CFF;
+  stroke: none;
+}
