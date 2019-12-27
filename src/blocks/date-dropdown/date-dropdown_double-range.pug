@@ -1,5 +1,40 @@
-mixin input-date_double-range(name, form)
-  input(type="txt" form=form name=name+"-from" placeholder="ДД.ММ.ГГГГ" class="input date-dropdown_double-range")
-  input(type="txt" form=form name=name+"-to" placeholder="ДД.ММ.ГГГГ" class="input date-dropdown_double-range")
+mixin input-date_double-range(options)
+  if (options.firstfield.id && 'txtlabel' in options.firstfield)
+    label(for= options.firstfield.id
+    class=options.classlabel
+    )= options.firstfield.txtlabel
+  input(type="txt"
+    name= options.firstfield.name
+    form= options.form
+    class="input date-dropdown_double-range"
+    id= options.firstfield.id
+    placeholder="ДД.ММ.ГГГГ"
+    )
+  if (options.secondfield.id && 'txtlabel' in options.secondfield)
+    label(for= options.secondfield.id
+    class=options.classlabel
+    )= options.secondfield.txtlabel
+  input(type="txt"
+    name= options.secondfield.name
+    form= options.form
+    class="input date-dropdown_double-range"
+    id= options.secondfield.id
+    placeholder="ДД.ММ.ГГГГ"
+    )
 
-//- +input-date_double-range('date-range', 'form')
+//- +input-date_double-range(
+//-   {
+//-     form:"form",
+//-     classlabel: "label-cta",
+//-     firstfield:{
+//-       name:"first-date-double-range",
+//-       id: "first-field-range-date",
+//-       txtlabel: "first",
+//-     },
+//-     secondfield:{
+//-       name:"second-date-double-range",
+//-       id: "second-field-range-date",
+//-       txtlabel: "second",
+//-     }
+//-   }
+//- )

@@ -69,8 +69,22 @@ html(lang="ru")
             }
           )
         .ui-kit__section-inner_m 
-          span.label-cta
-          +input-date_double-range('date-range', 'form')
+          +input-date_double-range(
+            {
+              form:"form",
+              classlabel: "label-cta",
+              firstfield:{
+                name:"first-date-double-range",
+                id: "first-field-range-date",
+                txtlabel: "date dropdown",
+              },
+              secondfield:{
+                name:"second-date-double-range",
+                id: "second-field-range-date",
+                txtlabel: "date dropdown",
+              }
+            }
+          )
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
           +checkbox(
