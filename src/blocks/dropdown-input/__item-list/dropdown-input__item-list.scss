@@ -8,8 +8,10 @@
   border-radius: 0 0 4px 4px;
   border-color: $dark_shade_50;
   display: none;
+  background: white;
 }
 
 .expand-triger:checked ~ .dropdown-input__item-list {
   display: block;
+  z-index: 10;
 }

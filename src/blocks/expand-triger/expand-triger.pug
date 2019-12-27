@@ -1,10 +1,10 @@
 include ../input/input.pug
 
-mixin expand-triger(labelClass, labelText)
+mixin expand-triger(labelClass, id, labelText)
   +input(
     {
       type: "checkbox",
-      id: "triger",
+      id: "triger" +id,
       txtlabel: labelText,
       classinput: "expand-triger",
       classlabel: `expand-triger__label expand-triger__label_${labelClass}`,
@@ -13,4 +13,4 @@ mixin expand-triger(labelClass, labelText)
 
 
 
-//- +expand-triger('check||burger||pointer', 'Сколько гостей')
+//- +expand-triger('check||burger||pointer', '1', 'Сколько гостей')

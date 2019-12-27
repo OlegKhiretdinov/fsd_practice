@@ -2,10 +2,10 @@ include __button/dropdown-input__button.pug
 include __item/dropdown-input__item.pug
 include ../expand-triger/expand-triger.pug
 
-mixin dropdown-input(label, listitem, button, trigerclass, labelText)
+mixin dropdown-input(label, listitem, button, trigerclass, trigerid, labelText)
   span.label-cta= label
   div.dropdown-input
-    +expand-triger(trigerclass, labelText)
+    +expand-triger(trigerclass, trigerid, labelText)
     .dropdown-input__item-list
       +dropdown-input__item(listitem)
       +dropdown-input__button(button)
@@ -13,12 +13,13 @@ mixin dropdown-input(label, listitem, button, trigerclass, labelText)
 
 
 //- +dropdown-input(
-//-   "field titel,
+//-   "field titel",
 //-   {
 //-     adult: "взрослые",
 //-     child: "дети",
 //-   },
 //-   ['очистить', 'применить'],
 //-   'check||burger||pointer',
+//-   'uniq id'
 //-   'field default text'
 //- )

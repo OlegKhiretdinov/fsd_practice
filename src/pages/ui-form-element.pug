@@ -57,6 +57,7 @@ html(lang="ru")
             },
             ['очистить', 'применить'],
             'check',
+            '1',
             'Сколько гостей'
           )
         .ui-kit__section-inner_m 
@@ -240,7 +241,34 @@ html(lang="ru")
               a.pagination-list__item 15
               a.pagination-list__item.pagination-list__pointer
             p.pagination-txt 1 – 12 из 100+ вариантов аренды
+      div(style="height:100px; width:100%")
       section.ui-kit__section-vertical
+        .ui-kit__section-inner_m(style="width:265px")
+          +dropdown-input(
+            "dropdown",
+            {
+              bedroom: "спальни",
+              bed: "кровати",
+              bathroom: "ванные комнаты"
+            },
+            [],
+            'check',
+            '2',
+            'удобства'
+          )
+        .ui-kit__section-inner_m(style="width:265px")
+          +dropdown-input(
+            "dropdown",
+            {
+              bedroom: "спальни",
+              bed: "кровати",
+              bathroom: "ванные комнаты"
+            },
+            [],
+            'check',
+            '3',
+            'удобства'
+          )
       section.ui-kit__section-vertical
       section.ui-kit__section-vertical
 
