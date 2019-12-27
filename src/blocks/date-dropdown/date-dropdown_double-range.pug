@@ -1,26 +1,29 @@
 mixin input-date_double-range(options)
-  if (options.firstfield.id && 'txtlabel' in options.firstfield)
-    label(for= options.firstfield.id
-    class=options.classlabel
-    )= options.firstfield.txtlabel
-  input(type="txt"
-    name= options.firstfield.name
-    form= options.form
-    class="input date-dropdown_double-range"
-    id= options.firstfield.id
-    placeholder="ДД.ММ.ГГГГ"
-    )
-  if (options.secondfield.id && 'txtlabel' in options.secondfield)
-    label(for= options.secondfield.id
-    class=options.classlabel
-    )= options.secondfield.txtlabel
-  input(type="txt"
-    name= options.secondfield.name
-    form= options.form
-    class="input date-dropdown_double-range"
-    id= options.secondfield.id
-    placeholder="ДД.ММ.ГГГГ"
-    )
+  .date-dropdown_double
+    .date-dropdown_inner
+      if (options.firstfield.id && 'txtlabel' in options.firstfield)
+        label(for= options.firstfield.id
+        class=options.classlabel
+        )= options.firstfield.txtlabel
+      input(type="txt"
+        name= options.firstfield.name
+        form= options.form
+        class="input date-dropdown_double-range"
+        id= options.firstfield.id
+        placeholder="ДД.ММ.ГГГГ"
+        )
+    .date-dropdown_inner
+      if (options.secondfield.id && 'txtlabel' in options.secondfield)
+        label(for= options.secondfield.id
+        class=options.classlabel
+        )= options.secondfield.txtlabel
+      input(type="txt"
+        name= options.secondfield.name
+        form= options.form
+        class="input date-dropdown_double-range"
+        id= options.secondfield.id
+        placeholder="ДД.ММ.ГГГГ"
+        )
 
 //- +input-date_double-range(
 //-   {

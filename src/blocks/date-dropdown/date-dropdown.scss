@@ -8,3 +8,25 @@
   border-radius: 4px;
   box-shadow: 0px 10px 20px $dark_shade_25;
 }
+
+.date-dropdown_inner {
+  max-width: calc(50% - 20px);
+  min-width: 150px;
+  position: relative;
+  &:after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    border-right: 2px solid rgba(31, 32, 65, 0.5);
+    border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+    transform: rotate(45deg);
+  }
+}
+
+.date-dropdown_double {
+  display: flex;
+  justify-content: space-between;
+}
