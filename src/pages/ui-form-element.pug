@@ -13,7 +13,8 @@ html(lang="ru")
     include ../blocks/like-button/like-button.pug
     include ../blocks/rate-button/rate-button.pug
     include ../blocks/range-slider/range-slider.pug
-    include ../blocks/date-dropdown/date-dropdown.pug
+    include ../blocks/date-dropdown/date-dropdown_single-range.pug
+    include ../blocks/date-dropdown/date-dropdown_double-range.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -57,9 +58,19 @@ html(lang="ru")
             'check',
             'Сколько гостей'
           )
-        div.ui-kit__section-inner_m 
-          p.label-cta masked text field
-          +input-date('date-range', 'form')
+        .ui-kit__section-inner_m 
+          +input-date_single-range(
+            {
+              name:"date-single-range",
+              form:"form",
+              id: "field-range-date",
+              txtlabel: "masked text field",
+              classlabel: "label-cta",
+            }
+          )
+        .ui-kit__section-inner_m 
+          span.label-cta
+          +input-date_double-range('date-range', 'form')
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
           +checkbox(

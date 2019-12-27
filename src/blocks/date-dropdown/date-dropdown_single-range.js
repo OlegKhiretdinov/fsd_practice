@@ -1,4 +1,4 @@
-$('.date-range').datepicker({
+$('.date-dropdown_single-range').datepicker({
   range: true,
   multipleDatesSeparator: '-',
   minDate: new Date(),
