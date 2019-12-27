@@ -85,6 +85,16 @@ html(lang="ru")
               }
             }
           )
+        .ui-kit__section-inner_m(style="width:265px")
+          +input-date_single-range(
+            {
+              name:"date-single-range",
+              form:"form",
+              id: "field-range-date-filter",
+              txtlabel: "filter date dropdown",
+              classlabel: "label-cta",
+            }
+          )
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
           +checkbox(

@@ -1,6 +1,6 @@
 mixin input-date_double-range(options)
   .date-dropdown_double
-    .date-dropdown_inner
+    .date-dropdown_inner.date-dropdown_inner_double
       if (options.firstfield.id && 'txtlabel' in options.firstfield)
         label(for= options.firstfield.id
         class=options.classlabel
@@ -12,7 +12,7 @@ mixin input-date_double-range(options)
         id= options.firstfield.id
         placeholder="ДД.ММ.ГГГГ"
         )
-    .date-dropdown_inner
+    .date-dropdown_inner.date-dropdown_inner_double
       if (options.secondfield.id && 'txtlabel' in options.secondfield)
         label(for= options.secondfield.id
         class=options.classlabel

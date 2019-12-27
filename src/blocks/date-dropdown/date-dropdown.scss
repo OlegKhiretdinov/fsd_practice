@@ -10,9 +10,11 @@
 }
 
 .date-dropdown_inner {
-  max-width: calc(50% - 20px);
-  min-width: 150px;
   position: relative;
+  &_double {
+    max-width: calc(50% - 20px);
+    min-width: 150px;
+  }
   &:after{
     content: '';
     width: 7px;

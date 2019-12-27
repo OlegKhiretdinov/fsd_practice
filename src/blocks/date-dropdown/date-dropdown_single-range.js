@@ -1,6 +1,7 @@
 $('.date-dropdown_single-range').datepicker({
   range: true,
   multipleDatesSeparator: '-',
+  dateFormat: 'd M',
   minDate: new Date(),
   clearButton: true,
   navTitles: {

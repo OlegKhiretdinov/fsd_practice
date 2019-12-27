@@ -1,15 +1,16 @@
 mixin input-date_single-range(options)
-  if (options.id && 'txtlabel' in options)
-    label(for= options.id
-    class=options.classlabel
-    )= options.txtlabel
-  input(type="txt"
-    name= options.name
-    form= options.form
-    class="input date-dropdown_single-range"
-    id= options.id
-    placeholder="ДД.ММ.ГГГГ"
-    )
+  .date-dropdown_inner
+    if (options.id && 'txtlabel' in options)
+      label(for= options.id
+      class=options.classlabel
+      )= options.txtlabel
+    input(type="txt"
+      name= options.name
+      form= options.form
+      class="input date-dropdown_single-range"
+      id= options.id
+      placeholder="ДД.ММ.ГГГГ"
+      )
 
 //- +input-date_single-range(
 //-   {
