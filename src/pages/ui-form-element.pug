@@ -15,6 +15,7 @@ html(lang="ru")
     include ../blocks/range-slider/range-slider.pug
     include ../blocks/date-dropdown/date-dropdown_single-range.pug
     include ../blocks/date-dropdown/date-dropdown_double-range.pug
+    include ../blocks/subscribe/subscribe.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -93,6 +94,15 @@ html(lang="ru")
               id: "field-range-date-filter",
               txtlabel: "filter date dropdown",
               classlabel: "label-cta",
+            }
+          )
+        .ui-kit__section-inner_m(style="width:265px")
+          p.label-cta subscription text field
+          +subscribe-form (
+            {
+              action: '#',
+              formName:"'subscribe'",
+              inputName:'email'
             }
           )
       section.ui-kit__section-vertical
