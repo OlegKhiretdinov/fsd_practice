@@ -17,6 +17,6 @@
   z-index: 10;
 }
 
-.checkbox:checked ~ .checkbox__label:before {
+.checkbox:checked + .checkbox__label:before {
   border-color: $main-color;
 }

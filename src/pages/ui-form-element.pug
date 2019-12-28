@@ -16,6 +16,7 @@ html(lang="ru")
     include ../blocks/date-dropdown/date-dropdown_single-range.pug
     include ../blocks/date-dropdown/date-dropdown_double-range.pug
     include ../blocks/subscribe/subscribe.pug
+    include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -268,6 +269,22 @@ html(lang="ru")
             'check',
             '3',
             'удобства'
+          )
+        .ui-kit__section-inner_m(style="width:265px")
+          +dropdown-checkbox(
+            'check',
+            'sheck-dd1-triger-id',
+            'expandable checkbox list',
+            {
+              dinner: "Завтрак",
+              writeTable: "Письменный стол",
+              feedingСhair: "Стул для комления",
+              crib: "Кроватка",
+              tv: "Телевизор",
+              shampoo: "Шампунь",
+              moreTv: "Телевизор",
+              moreShampoo: "Шампунь",
+            }
           )
       section.ui-kit__section-vertical
       section.ui-kit__section-vertical

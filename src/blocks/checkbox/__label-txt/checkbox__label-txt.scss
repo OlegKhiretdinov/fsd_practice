@@ -7,13 +7,13 @@
   transform: rotate(45deg);
 }
 
-.checkbox:checked ~ .checkbox__label .checkbox__label-txt:before {
+.checkbox:checked + .checkbox__label .checkbox__label-txt:before {
   @extend %check;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   top: 5px;
 }
 
-.checkbox:checked ~ .checkbox__label .checkbox__label-txt:after {
+.checkbox:checked + .checkbox__label .checkbox__label-txt:after {
   @extend %check;
   background: white;
   top: 2px;
