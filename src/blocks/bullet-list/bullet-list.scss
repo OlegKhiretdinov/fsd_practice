@@ -1,0 +1,20 @@
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  
+  &__item {
+    padding-left: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $dark-shade-25;
+      position: absolute;
+      top: 7px;
+      left: 0;
+    }
+  }
+}

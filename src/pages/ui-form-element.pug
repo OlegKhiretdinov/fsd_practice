@@ -18,6 +18,7 @@ html(lang="ru")
     include ../blocks/subscribe/subscribe.pug
     include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
     include ../blocks/rich-checkbox/rich-checkbox.pug
+    include ../blocks/bullet-list/bullet-list.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -356,4 +357,8 @@ html(lang="ru")
             'Сколько гостей'
           )
         div(style="height:200px;")
+        p.label-cta bullet list
+        +bullet-list(["Нельзя с питомцами",
+                      "Без вечеринок и мероприятий",
+                      "Время прибытия — после 13:00,а выезд до 12:00"])
       section.section-horizont
