@@ -286,7 +286,47 @@ html(lang="ru")
               moreShampoo: "Шампунь",
             }
           )
+        .ui-kit__section-inner_m(style="width:265px")
+          +dropdown-checkbox(
+            'check',
+            'sheck-dd2-triger-id',
+            'expandable checkbox list',
+            {
+              dinner: "Завтрак",
+              writeTable: "Письменный стол",
+              feedingСhair: "Стул для комления",
+              crib: "Кроватка",
+              tv: "Телевизор",
+              shampoo: "Шампунь",
+              moreTv: "Телевизор",
+              moreShampoo: "Шампунь",
+            }
+          )
+        div(style="height:200px;")
       section.ui-kit__section-vertical
+        +dropdown-input(
+            "dropdown",
+            {
+              adult: "взрослые",
+              child: "дети",
+              minichild: "младенцы",
+            },
+            ['применить'],
+            'check',
+            '11',
+            'Сколько гостей'
+          )
       section.ui-kit__section-vertical
-
+        +dropdown-input(
+            "dropdown",
+            {
+              adult: "взрослые",
+              child: "дети",
+              minichild: "младенцы",
+            },
+            ['очистить', 'применить'],
+            'check',
+            '12',
+            'Сколько гостей'
+          )
       section.section-horizont

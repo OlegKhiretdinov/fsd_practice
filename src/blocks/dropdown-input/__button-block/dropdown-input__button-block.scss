@@ -1,9 +1,9 @@
 .dropdown-input__button-block {
   display: flex;
-  justify-content: space-between;
   margin: 20px 0 10px;
 }
 
-.dropdown-input__button-block .dropdown-input__button:first-child {
-  color: $dark_shade_50;
+.dropdown-input__button-block .dropdown-input__button:last-child {
+  margin-left: auto;
+  color: $main-color;
 }
