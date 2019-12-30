@@ -19,6 +19,7 @@ html(lang="ru")
     include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
     include ../blocks/rich-checkbox/rich-checkbox.pug
     include ../blocks/bullet-list/bullet-list.pug
+    include ../blocks/room-info/room-info.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -362,3 +363,6 @@ html(lang="ru")
                       "Без вечеринок и мероприятий",
                       "Время прибытия — после 13:00,а выезд до 12:00"])
       section.section-horizont
+        div(style="width:280px;")
+        +room-info({комфорт:"Шумопоглощающие стены",
+                    удобство:"Окно в каждой из спален"})

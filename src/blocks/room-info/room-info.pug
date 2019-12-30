@@ -1,0 +1,31 @@
+mixin room-info(options)
+  div.room-info
+    each item, view in options
+      if (view =='комфорт')
+        .room-info__item
+          div.room-info__icon
+            img(src=require("../blocks/room-info/insert_emoticon.svg") alt="")
+          .room-info__txt
+            strong Комфорт
+            br
+            span= item
+      else if (view == 'удобство')
+        .room-info__item
+          div.room-info__icon
+            img(src=require("../blocks/room-info/location_city.svg") alt="")
+          .room-info__txt
+            strong Удобство
+            br
+            span= item
+      else if (view == 'уют')
+        .room-info__item
+          div.room-info__icon
+            img(src=require("../blocks/room-info/whatshot.svg") alt="")
+          .room-info__txt
+            strong Уют
+            br
+            span= item
+
+
+
+//- +room-info({комфорт:"", уют:""})
