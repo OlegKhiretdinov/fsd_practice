@@ -1,0 +1,26 @@
+include ../like-button/like-button.pug
+
+mixin comment(comment, like, txt)
+  .comment
+    .comment__inner
+      .comment__author-foto
+        img(src=require("../blocks/comment/"+comment.photo) alt='')
+      .comment__author-name
+        strong= comment.author
+        br 
+        span= comment.date
+    .comment__inner
+      .comment__like
+        +like-button(like[1],like[1])
+      p.comment__txt= txt
+
+
+
+
+//- +comment(
+//-   {author: 'author name',
+//-   date: 'date',
+//-   photo: 'url'},
+//-   [0,12],
+//-   'comment txt'
+//-   )

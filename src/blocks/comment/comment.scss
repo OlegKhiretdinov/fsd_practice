@@ -1,0 +1,16 @@
+.comment{
+
+  &__inner {
+    display: flex;
+    margin: 10px 0;
+  
+    & > div:first-child {
+      width: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  &__txt {
+    margin: 0;
+  }
+}

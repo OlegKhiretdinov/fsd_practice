@@ -20,6 +20,7 @@ html(lang="ru")
     include ../blocks/rich-checkbox/rich-checkbox.pug
     include ../blocks/bullet-list/bullet-list.pug
     include ../blocks/room-info/room-info.pug
+    include ../blocks/comment/comment.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -364,5 +365,13 @@ html(lang="ru")
                       "Время прибытия — после 13:00,а выезд до 12:00"])
       section.section-horizont
         div(style="width:280px;")
-        +room-info({комфорт:"Шумопоглощающие стены",
+          +room-info({комфорт:"Шумопоглощающие стены",
                     удобство:"Окно в каждой из спален"})
+        div(style="width:720px")
+          +comment(
+            {author: 'Мурад Сарафанов',
+            date: '5 дней назад',
+            photo: 'image.png'},
+            [1,12],
+            'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+          )
