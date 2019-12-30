@@ -17,6 +17,7 @@ html(lang="ru")
     include ../blocks/date-dropdown/date-dropdown_double-range.pug
     include ../blocks/subscribe/subscribe.pug
     include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
+    include ../blocks/rich-checkbox/rich-checkbox.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -317,6 +318,30 @@ html(lang="ru")
             'Сколько гостей'
           )
         div(style="height:200px;")
+        .ui-kit__section-inner_m(style="width:265px")
+          p.label-cta rich Checkbox Buttons
+          +rich-checkbox(
+            {
+              name: "large-hall",
+              value: "large-hall",
+              id: "hall",
+            },
+            {
+            label: "Широкий коридор",
+            description: "Ширина коридоров в номере не менее 91 см.",
+            }
+          )
+          +rich-checkbox(
+            {
+              name: "disabled-assistant",
+              value: "disabled-assistant",
+              id: "disabled-assistant",
+            },
+            {
+            label: "Помощник для инвалидов",
+            description: "На 1 этаже вас встретит специалист  и проводит до номера.",
+            }
+          )
       section.ui-kit__section-vertical
         +dropdown-input(
             "dropdown",
