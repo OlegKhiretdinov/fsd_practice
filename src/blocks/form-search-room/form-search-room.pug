@@ -6,7 +6,7 @@ form.form(action="#" name="search-room" id="search-room")
   fieldset.form__inner
     +input-date_double-range(
       {
-        form:"",
+        form:"search-room",
         classlabel: "label-cta",
         firstfield:{
           name:"arrival",
@@ -33,4 +33,4 @@ form.form(action="#" name="search-room" id="search-room")
       'search-room-guest',
       'Сколько гостей'
     )
-  <button class="button button_fill button_pointer" type="button">подобрать номер</button>
+  <button class="button button_fill button_pointer" type="submit">подобрать номер</button>

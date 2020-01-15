@@ -6,5 +6,7 @@ html(lang="ru")
   body.page
     include ../blocks/ui-kit/__header/ui-kit__header.pug
     main.ui-kit
-      section.ui-kit__section-vertical
-      include ../blocks/form-search-room/form-search-room.pug
+      section(style="max-width:380px")
+        include ../blocks/form-search-room/form-search-room.pug
+        div(style="height:40px")
+        include ../blocks/form-join/form-join.pug
