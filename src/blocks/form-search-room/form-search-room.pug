@@ -1,0 +1,36 @@
+include ../date-dropdown/date-dropdown_double-range.pug
+include ../dropdown-input/dropdown-input.pug
+
+form.form(action="#" name="search-room" id="search-room")
+  p.title Найдём номера под ваши пожелания
+  fieldset.form__inner
+    +input-date_double-range(
+      {
+        form:"",
+        classlabel: "label-cta",
+        firstfield:{
+          name:"arrival",
+          id: "first-field-range-date",
+          txtlabel: "прибытие",
+        },
+        secondfield:{
+          name:"departure",
+          id: "second-field-range-date",
+          txtlabel: "выезд",
+        }
+      }
+    )
+  fieldset.form__inner
+    +dropdown-input(
+      "гости",
+      {
+        adult: "взрослые",
+        child: "дети",
+        minichild: "младенцы"
+      },
+      ['очистить', 'применить'],
+      'check',
+      'search-room-guest',
+      'Сколько гостей'
+    )
+  <button class="button button_fill button_pointer" type="button">подобрать номер</button>

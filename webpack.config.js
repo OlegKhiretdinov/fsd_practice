@@ -26,6 +26,11 @@ module.exports = {
       filename: 'ui-form.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/cards.pug',
+      filename: 'cards.html',
+      inject: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
