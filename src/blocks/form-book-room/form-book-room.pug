@@ -1,0 +1,58 @@
+include ../date-dropdown/date-dropdown_double-range.pug
+include ../dropdown-input/dropdown-input.pug
+
+form.form(action="#" name="book-room" id="book-room" method="get")
+  .form-book-room__header
+    span.title №888 
+    span.form-book-room__class-room люкс
+    span.form-book-room__price
+      b 9990₽ 
+      | в сутки
+  fieldset.form__inner
+    +input-date_double-range(
+      {
+        form:"book-room",
+        classlabel: "label-cta",
+        firstfield:{
+          name:"arrival",
+          id: "first-field-range-date",
+          txtlabel: "прибытие",
+        },
+        secondfield:{
+          name:"departure",
+          id: "second-field-range-date",
+          txtlabel: "выезд",
+        }
+      }
+    )
+  fieldset.form__inner
+    +dropdown-input(
+      "гости",
+      {
+        adult: "взрослые",
+        child: "дети",
+        minichild: "младенцы"
+      },
+      ['очистить', 'применить'],
+      'check',
+      'book-room-guest',
+      'Сколько гостей'
+    )
+  .form__inner
+    .form-book-room__details
+      .form-book-room__details-item
+        .form-book-room__details-description 9900 x 4 суток
+        .form-book-room__details-price 39 960₽
+      .form-book-room__details-item
+        .form-book-room__details-description Сбор за услуги: скидка 2 179₽
+        .form-book-room__details-info i
+        .form-book-room__details-price 0₽
+      .form-book-room__details-item
+        .form-book-room__details-description Сбор за дополнительные услуги
+        .form-book-room__details-info i
+        .form-book-room__details-price 300₽
+    .form-book-room__final-price
+      .sub-title ИТОГО
+      .form-book-room__final-price-line
+      .sub-title 38 081₽
+  <button class="button button_fill button_pointer" type="submit">забронировать</button>
