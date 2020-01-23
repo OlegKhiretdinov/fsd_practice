@@ -12,6 +12,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/'),
     filename: "[name]"
   },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, 'src/img/')
+    }
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'style.css',
