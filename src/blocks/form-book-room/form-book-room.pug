@@ -2,12 +2,13 @@ include ../date-dropdown/date-dropdown_double-range.pug
 include ../dropdown-input/dropdown-input.pug
 
 form.form(action="#" name="book-room" id="book-room" method="get")
-  .form-book-room__header
-    span.title №888 
-    span.form-book-room__class-room люкс
-    span.form-book-room__price
+  .room-card__head
+    span.room-card__number №
+      span.title 888 
+    span.room-card__class-room люкс
+    span.room-card__price
       b 9990₽ 
-      | в сутки
+      span.room-card__price-txt в сутки
   fieldset.form__inner
     +input-date_double-range(
       {
