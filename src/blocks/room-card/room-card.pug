@@ -1,0 +1,27 @@
+include ../rate-button/rate-button.pug
+
+mixin room-card(img, roominfo, rate)
+  .room-card
+    .room-card__gallery
+      ul.light-slider
+        each url, alt in img
+          li
+            img(src=require("images/room/"+url) alt=alt)
+    .room-card__inner
+      .room-card__head
+        span.room-card__number №
+          span.title #{roominfo[0]}
+        span.room-card__class-room= roominfo[1]
+        span.room-card__price
+          b #{roominfo[2]}₽ 
+          span.room-card__price-txt в сутки
+      .room-card__line
+      .room-card__rating
+        +rate-button(rate[0])
+        .room-card__voite-count= rate[1]
+
+//- + room-card(
+//-   {"комната":"/room888/thumbnail.jpg",
+//-   "комната1":"/room888/thumbnail.jpg"},
+//-   ['888', 'люкс', '9990'],
+//-   ['5', '145 отзывов'])
