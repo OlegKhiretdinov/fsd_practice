@@ -5,17 +5,25 @@ html(lang="ru")
     title Headers & Footers
   body.page
     include ../blocks/ui-kit/__header/ui-kit__header.pug
+    include ../blocks/nav/nav.pug
+    include ../blocks/user-login/user-login.pug
     div(style="height:20px")
     main(style="width:1440px;margin:20px auto;")
       header.header
         .logo
           a(href="/")
             include ../blocks/logo/logo.pug
+        nav
+          +nav({'Home':'#', 'About Us':'#', 'Services':{'Services1':'#', 'Services2':'#', 'Serv':{'serv':'#', 'serv1':'#', 'serv3':{'assa':'#', 'assa2':'#'}}, ser:'#'}, 'Careers':'#', 'Documentation':'#'})
+        +user-login('', 'login', 'register')
       div(style="height:40px")
       header.header
         .logo
           a(href="/")
             include ../blocks/logo/logo.pug
+        nav
+          +nav({'Home':'#', 'About Us':'#', 'Services':{'Services1':'#', 'Services2':'#'}, 'Careers':'#', 'Documentation':'#'})
+        +user-login('Cosmin Negoita')
       div(style="height:40px")
       include ../blocks/footer/footer.pug
       include ../blocks/footer/footer-copyright.pug
