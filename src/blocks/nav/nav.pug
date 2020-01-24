@@ -1,0 +1,14 @@
+mixin nav(navlist)
+  ul.nav__list
+    each url, txt in navlist
+      - if(typeof(url) !== 'object')
+        li.nav__item
+          a.nav__link(href= url)= txt
+      - else
+        li.nav__item.nav__item_multi-level
+          span.nav__link= txt
+          +nav(url)
+
+//- +nav({TXT1:"url1", txt2:"url2",
+//-   tXt3:{txt31:"url31", txt32:"url32",
+//-       txt33:{txt331:"url331"}}})
