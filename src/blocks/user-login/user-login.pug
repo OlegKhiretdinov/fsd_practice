@@ -1,0 +1,9 @@
+mixin user-login(userName, login, register)
+  if(userName)
+    .user-logged= userName
+  else
+    .header__login-button
+      button.button.button_border= login
+      button.button.button_fill= register
+
+//- +user-login('Cosmin Negoita', 'login', 'register')

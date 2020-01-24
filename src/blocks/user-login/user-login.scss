@@ -1,0 +1,13 @@
+.header__login-button .button:nth-child(1) {
+  margin-right: 20px;
+}
+
+.header__login-button .button {
+  padding: 10px 20px;
+}
+
+.user-logged {
+  padding-left: 30px;
+  border-left: 1px solid $dark_shade_25;
+  color: $dark_shade_50;
+}
