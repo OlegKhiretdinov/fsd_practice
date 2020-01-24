@@ -1,0 +1,9 @@
+mixin menu(title, menulist)
+  .menu
+    h3.label-cta= title
+    ul.menu__list
+      each url, txt in menulist
+        li.menu__item
+          a.menu__link(href= url)= txt
+
+//- +menu("title rrr", {"TXT 1":"url1", txt2:"url2"})
