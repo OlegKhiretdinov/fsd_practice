@@ -1,0 +1,23 @@
+doctype html
+html(lang="ru")
+  head
+    include ../blocks/head/head.pug
+    title Headers & Footers
+  body.page
+    include ../blocks/ui-kit/__header/ui-kit__header.pug
+    div(style="height:20px")
+    main(style="width:1440px;margin:20px auto;")
+      header.header
+        .logo
+          a(href="/")
+            include ../blocks/logo/logo.pug
+      div(style="height:40px")
+      header.header
+        .logo
+          a(href="/")
+            include ../blocks/logo/logo.pug
+      div(style="height:40px")
+      include ../blocks/footer/footer.pug
+      include ../blocks/footer/footer-copyright.pug
+      div(style="height:40px")
+      include ../blocks/footer/footer_creative.pug

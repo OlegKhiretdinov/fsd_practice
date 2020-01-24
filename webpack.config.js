@@ -36,6 +36,11 @@ module.exports = {
       filename: 'cards.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/headers-footers.pug',
+      filename: 'headers-footers.html',
+      inject: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
