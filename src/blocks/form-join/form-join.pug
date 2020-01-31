@@ -1,5 +1,6 @@
 include ../radiobutton/radiobutton.pug
 include ../toggle/toggle.pug
+include ../button/button_border.pug
 
 form.form(action="#" name="join" id="join" method="get")
   h2.title Регистрация аккаунта
@@ -55,4 +56,5 @@ form.form(action="#" name="join" id="join" method="get")
   <button class="button button_fill button_pointer" type="submit">перейти к оплате</button>
   .form__footer
     p Уже есть аккаунт на Toxin
-    a(href="#" class="button button_border") войти
+    a(href="#")
+      +button_border('войти')

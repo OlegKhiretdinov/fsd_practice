@@ -1,3 +1,4 @@
+include ../button/button_border.pug
 form.form(action="#" name="login" id="login" method="get")
   h2.title Войти
   fieldset.form__inner
@@ -6,4 +7,5 @@ form.form(action="#" name="login" id="login" method="get")
   <button class="button button_fill button_pointer" type="submit">войти</button>
   .form__footer
     p Нет аккаунта на Toxin
-    a(href="#" class="button button_border") создать
+    a(href="#")
+      +button_border('создать')

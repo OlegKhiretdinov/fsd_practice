@@ -1,5 +1,6 @@
 .dropdown-checkbox {
   position: relative;
+  background: white;
   
   & .expand-triger__label_check {
     @extend .label-cta;
@@ -11,6 +12,9 @@
 
   & .expand-triger:checked ~ .dropdown-checkbox__list {
     display: block;
+    background: inherit;
+    width: 100%;
+    z-index: 10;
   }
 
   & .dropdown-checkbox__list {

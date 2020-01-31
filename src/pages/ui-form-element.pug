@@ -21,6 +21,7 @@ html(lang="ru")
     include ../blocks/bullet-list/bullet-list.pug
     include ../blocks/room-info/room-info.pug
     include ../blocks/comment/comment.pug
+    include ../blocks/button/button_border.pug
     main.ui-kit
       section.ui-kit__section-vertical
         div.ui-kit__section-inner_m 
@@ -126,7 +127,6 @@ html(lang="ru")
             class: ""
             }
           )
-        div.ui-kit__section-inner_m 
           +checkbox(
             {
               name: "cbbox",
@@ -140,7 +140,6 @@ html(lang="ru")
             class: ""
             }
           )
-        div.ui-kit__section-inner_m 
           +checkbox(
             {
               name: "cbbox",
@@ -155,6 +154,8 @@ html(lang="ru")
             }
           )
         div.ui-kit__section-inner_m
+          span.label-cta radio buttons
+          br
           +radiobutton(
             {
               name: "gender",
@@ -182,6 +183,8 @@ html(lang="ru")
             }
           )
         div.ui-kit__section-inner_m
+          span.label-cta toggle
+          br
           +toggle(
             {
               name: "toggle1",
@@ -208,10 +211,12 @@ html(lang="ru")
             class: ""
             }
           )
-        div.ui-kit__section-inner_m
+        span.label-cta like button
+        div.ui-kit__section-inner_m(style={display:'flex'})
           +like-button(0,2)
-        div.ui-kit__section-inner_m
+          div(style="width:10px;")
           +like-button(1,12)
+        span.label-cta rate button
         div.ui-kit__section-inner_m.ui-kit__rate-line
           +rate-button(4)
           +rate-button(5)
@@ -225,9 +230,9 @@ html(lang="ru")
           span(style="width:30px; display:inline-block;")
           button(type="button" class="button button_fill") click me
           span(style="height:30px; display:block;")
-          button(type="button" class="button button_border") click me
+          +button_border('click me')
           span(style="width:30px; display:inline-block;")
-          button(type="button" class="button button_border") click me
+          +button_border('click me')
           span(style="height:30px; display:block;")
           button(type="button" class="button button_lite") click me
           span(style="width:30px; display:inline-block;")
