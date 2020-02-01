@@ -11,7 +11,11 @@ nav {
 .nav__item {
   @extend .menu__item;
   position: relative;
-  margin: 0 30px;
+  margin: 0 15px;
+}
+
+.nav__item:last-child{
+  margin-right: 30px;
 }
 
 .nav__item .nav__item {
@@ -30,8 +34,8 @@ nav {
   height: 6px;
   position: absolute;
   right: 0;
-  top: 0.5em;
-  z-index: 10;
+  top: calc(50% - 6px);
+  z-index: 20;
   border-right: 2px solid $dark_shade_50;
   border-bottom: 2px solid $dark_shade_50;
   transform: rotate(45deg);
@@ -48,16 +52,28 @@ nav {
 
 .nav__item > ul {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
 }
 
 .nav__item_multi-level:hover > ul {
   display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  
 }
 
 .nav__item_multi-level .nav__item_multi-level:hover > ul {
   top: 0;
   left: 100%;
+}
+
+.nav__item_multi-level .nav__item {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid $dark_shade_50;
+}
+
+.nav__item:last-child {
+  border: none;
 }

@@ -47,6 +47,7 @@ $font-family-title: 'Quicksand';
 @import './blocks/form-book-room/form-book-room.scss';
 @import './blocks/room-card/room-card.scss';
 @import './blocks/user-login/user-login.scss';
+@import './blocks/logo/logo.scss';
 
 // UI Kit
 // @import './blocks/ui.page/header-ui/header-ui.scss';
@@ -57,4 +58,9 @@ button {
   margin: 0;
   border: none;
   background: none;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
 }
