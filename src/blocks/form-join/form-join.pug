@@ -4,7 +4,7 @@ include ../button/button_border.pug
 
 form.form(action="#" name="join" id="join" method="get")
   h2.title Регистрация аккаунта
-  fieldset.form__inner
+  fieldset.form__inner.form__inner_log
     input(type="text" name="name" placeholder="Имя" class="input")
     input(type="text" name="surname" placeholder="Фамилия" class="input")
     +radiobutton(
@@ -36,7 +36,7 @@ form.form(action="#" name="join" id="join" method="get")
   fieldset.form__inner
     span.label-cta дата рождения
     input(class="input" type="text" name="birthday" placeholder="ДД.ММ.ГГГГ")
-  fieldset.form__inner
+  fieldset.form__inner.form__inner_log
     span.label-cta данные для входа в сервис
     input(class="input" type="email" name="email" placeholder="Email")
     input(class="input" type="password" name="password" placeholder="Пароль")
