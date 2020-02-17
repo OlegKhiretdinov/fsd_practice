@@ -1,0 +1,43 @@
+html
+  head
+    block head
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      title
+  body.page
+    header.header
+      .logo
+        a(href="/")
+          include ../blocks/logo/logo.pug
+      block navigation
+        include ../blocks/nav/nav.pug
+        nav
+          +nav({'Home':'#', 'About Us':'#', 'Services':{'Services1':'#', 'Services2':'#', 'Serv':{'serv':'#', 'serv1':'#',}, ser:'#'}, 'Careers':'#', 'News':'#', 'Documentation':'#'})
+      block user-login
+        include ../blocks/user-login/user-login.pug
+        +user-login('', 'login', 'register')
+    block content
+    .content
+    footer.footer
+      include ../blocks/menu/menu.pug
+      include ../blocks/subscribe/subscribe.pug
+      .footer__content
+        .logo
+          include ../blocks/logo/logo.pug
+        p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+      .footer__menu
+        +menu("navigation", {"About Us":"#", "News":"#", "Support":"#", "Products":"#"})
+        +menu("about us", {"Who we are":"#", "Our team":"#", "Careers":"#", "Investors":"#"})
+        +menu("support", {"Documentation":"#", "Community":"#", "Get in Touch":"#"})
+      .footer__content
+        h3.label-cta Subscribe to our newsletter
+        p Receive our latest news and 
+          |promotions in your inbox!
+        +subscribe-form (
+          {
+            action: '#',
+            formName:"'subscribe'",
+            inputName:'email'
+          }
+        )
+    include ../blocks/footer/footer-copyright.pug
