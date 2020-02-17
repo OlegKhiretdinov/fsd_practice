@@ -46,6 +46,11 @@ module.exports = {
       filename: 'landing.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/registration.pug',
+      filename: 'registration.html',
+      inject: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
