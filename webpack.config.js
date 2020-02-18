@@ -56,6 +56,11 @@ module.exports = {
       filename: 'sign-in.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/search-room.pug',
+      filename: 'search-room.html',
+      inject: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

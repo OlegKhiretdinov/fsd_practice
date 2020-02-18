@@ -1,0 +1,229 @@
+extends ../layout/page-layout.pug
+
+prepend head
+  -title = 'search room';
+
+block content
+  .page_search
+    aside.page__sidebar
+      include ../blocks/date-dropdown/date-dropdown_single-range.pug
+      +input-date_single-range(
+        {
+          name:"date-single-range",
+          id: "field-range-date",
+          txtlabel: "даты пребывания в отеле",
+          classlabel: "label-cta",
+        }
+      )
+      include ../blocks/dropdown-input/dropdown-input.pug
+      +dropdown-input(
+        "гости",
+        {
+          adult: "взрослые",
+          child: "дети",
+          minichild: "младенцы",
+        },
+        ['очистить', 'применить'],
+        'check',
+        'search-room-guest',
+        'сколько гостей'
+      )
+      include ../blocks/range-slider/range-slider.pug
+      div
+        +range-slider('диапазон цен')
+        span.note Стоимость за сутки пребывания в номере
+      include ../blocks/checkbox/checkbox.pug
+      div
+        span.label-cta checkbox buttons
+        +checkbox(
+          {
+            name: "smoke",
+            value: "smoke",
+            id: "smoking",
+            class: "",
+            checked: 0,
+          },
+          {
+          txt: "Можно курить",
+          class: ""
+          }
+        )
+        +checkbox(
+          {
+            name: "pet",
+            value: "pet",
+            id: "pet",
+            class: "",
+            checked: 1,
+          },
+          {
+          txt: "Можно с питомцами",
+          class: ""
+          }
+        )
+        +checkbox(
+          {
+            name: "guest",
+            value: "guest",
+            id: "guest",
+            class: "",
+            checked: 1,
+          },
+          {
+          txt: "Можно пригласить гостей (до 10 человек)",
+          class: ""
+          }
+        )
+      include ../blocks/rich-checkbox/rich-checkbox.pug
+      div
+        span.label-cta Доступность
+        +rich-checkbox(
+          {
+            name: "hall",
+            value: "hall",
+            id: "hall"
+          },
+          {
+          label: "Широкий коридор",
+          description: "Ширина коридора в номере не менее 91 см.",
+          class: ""
+          }
+        )
+        +rich-checkbox(
+          {
+            name: "helper",
+            value: "helper",
+            id: "helper"
+          },
+          {
+          label: "Помошник для инвалидов",
+          description: "На 1 этаже вас встретит специалист и проводит до номера",
+          class: ""
+          }
+        )
+      div
+        +dropdown-input(
+          "удобства номера",
+          {
+            bedroom: "спальни",
+            bed: "кровати",
+            bathroom: "ванные комнать",
+          },
+          [],
+          'check',
+          'comfort',
+          'удобства'
+        )
+      include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
+      +dropdown-checkbox(
+        'check',
+        'options',
+        'дополнительные удобства',
+        {
+          dinner: "Завтрак",
+          writeTable: "Письменный стол",
+          feedingСhair: "Стул для комления",
+          crib: "Кроватка",
+          tv: "Телевизор",
+          shampoo: "Шампунь",
+          moreTv: "Телевизор",
+          moreShampoo: "Шампунь",
+        }
+      )
+    main.page__search-content
+      h1.title Номера, которые мы для вас подобрали
+      include ../blocks/room-card/room-card.pug
+      .page__search-result
+        +room-card(
+          {"комната1":"room888/thumbnail888.jpg",
+          "комната2":"room888/thumbnail888.jpg",
+          "комната3":"room888/thumbnail888.jpg",
+          "комната4":"room888/thumbnail888.jpg",},
+          ['888', 'люкс', '9990'],
+          ['5', '145 отзывов'])
+        +room-card(
+          {"комната1":"room840/thumbnail840.jpg",
+          "комната2":"room840/thumbnail840.jpg",
+          "комната3":"room840/thumbnail840.jpg",
+          "комната4":"room840/thumbnail840.jpg",},
+          ['840', '', '9990'],
+          ['4', '65 отзывов'])
+        +room-card(
+          {"комната1":"room980/thumbnail980.jpg",
+          "комната2":"room980/thumbnail980.jpg",
+          "комната3":"room980/thumbnail980.jpg",
+          "комната4":"room980/thumbnail980.jpg",},
+          ['980', 'люкс', '8500'],
+          ['3', '35 отзывов'])
+        +room-card(
+          {"комната1":"room856/thumbnail856.jpg",
+          "комната2":"room856/thumbnail856.jpg",
+          "комната3":"room856/thumbnail856.jpg",
+          "комната4":"room856/thumbnail856.jpg",},
+          ['856', '', '7300'],
+          ['5', '19 отзывов'])
+        +room-card(
+          {"комната1":"room740/thumbnail740.jpg",
+          "комната2":"room740/thumbnail740.jpg",
+          "комната3":"room740/thumbnail740.jpg",
+          "комната4":"room740/thumbnail740.jpg",},
+          ['740', '', '6000'],
+          ['4', '44 отзывов'])
+        +room-card(
+          {"комната1":"room982/thumbnail982.jpg",
+          "комната2":"room982/thumbnail982.jpg",
+          "комната3":"room982/thumbnail982.jpg",
+          "комната4":"room982/thumbnail982.jpg",},
+          ['982', '', '5800'],
+          ['3', '56 отзывов'])
+        +room-card(
+          {"комната1":"room678/thumbnail678.jpg",
+          "комната2":"room678/thumbnail678.jpg",
+          "комната3":"room678/thumbnail678.jpg",
+          "комната4":"room678/thumbnail678.jpg",},
+          ['678', '', '5500'],
+          ['5', '45 отзывов'])
+        +room-card(
+          {"комната1":"room450/thumbnail450.jpg",
+          "комната2":"room450/thumbnail450.jpg",
+          "комната3":"room450/thumbnail450.jpg",
+          "комната4":"room450/thumbnail450.jpg",},
+          ['450', '', '5300'],
+          ['4', '39 отзывов'])
+        +room-card(
+          {"комната1":"room350/thumbnail350.jpg",
+          "комната2":"room350/thumbnail350.jpg",
+          "комната3":"room350/thumbnail350.jpg",
+          "комната4":"room350/thumbnail350.jpg",},
+          ['350', '', '5000'],
+          ['3', '77 отзывов'])
+        +room-card(
+          {"комната1":"room666/thumbnail666.jpg",
+          "комната2":"room666/thumbnail666.jpg",
+          "комната3":"room666/thumbnail666.jpg",
+          "комната4":"room666/thumbnail666.jpg",},
+          ['666', '', '5000'],
+          ['5', '25 отзывов'])
+        +room-card(
+          {"комната1":"room444/thumbnail444.jpg",
+          "комната2":"room444/thumbnail444.jpg",
+          "комната3":"room444/thumbnail444.jpg",
+          "комната4":"room444/thumbnail444.jpg",},
+          ['444', '', '5000'],
+          ['3', '15 отзывов'])
+        +room-card(
+          {"комната1":"room352/thumbnail352.jpg",
+          "комната2":"room352/thumbnail352.jpg",
+          "комната3":"room352/thumbnail352.jpg",
+          "комната4":"room352/thumbnail352.jpg",},
+          ['352', '', '5000'],
+          ['3', '55 отзывов'])
+      .pagination
+          .pagination-list
+            a.pagination-list__item.pagination-list__item_active 1
+            a.pagination-list__item 2
+            a.pagination-list__item 3
+            a.pagination-list__item ...
+            a.pagination-list__item 15
+            a.pagination-list__item.pagination-list__pointer
+          p.pagination-txt 1 – 12 из 100+ вариантов аренды
