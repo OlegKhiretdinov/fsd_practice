@@ -4,9 +4,39 @@
   font: normal 14px/24px $font-family-text, sans-Serif;
   background: #e5e5e5;
   color: $text-color;
+
+  &__sidebar {
+    min-width: 266px;
+    padding: 0 2px;
+  
+    & > div {
+      margin-bottom: 30px;
+    }
+  }
+  
+  &__search-result{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > div {
+      margin-top: 10px;
+    }
+  }
+  &__search-content {
+    margin-left: 60px;
+  }
 }
 
 .page__inner {
   max-width: 1440px;
   margin: 0 auto;
+  background: white;
+}
+
+.page_search {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 140px 70px;
+  border-bottom: 1px solid $dark_shade_25;
 }

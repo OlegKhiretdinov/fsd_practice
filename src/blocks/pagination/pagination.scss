@@ -1,5 +1,6 @@
 .pagination-list {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
 
   &__item {
@@ -43,4 +44,5 @@
 
 .pagination-txt {
   margin: 10px;
+  text-align: center;
 }
