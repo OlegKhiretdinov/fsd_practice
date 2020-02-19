@@ -61,6 +61,11 @@ module.exports = {
       filename: 'search-room.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/room-details.pug',
+      filename: 'room-details.html',
+      inject: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -107,7 +112,7 @@ module.exports = {
       ],
     },
     {
-      test: /\.(ttf|woff)$/,
+      test: /\.(ttf|woff|eot)$/,
       use: [{
         loader: 'file-loader',
         options: {

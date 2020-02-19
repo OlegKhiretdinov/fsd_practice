@@ -1,0 +1,116 @@
+extends ../layout/page-layout.pug
+
+prepend head
+  -title = 'room details';
+
+block content
+  include ../blocks/room-gallery/room-gallery.pug
+  +room-gallery({
+    "room888/gallery/room888-thumb-image1.jpg":"room888/gallery/room888-image1.jpg",
+    "room888/gallery/room888-thumb-image2.jpg":"room888/gallery/room888-image2.jpg",
+    "room888/gallery/room888-thumb-image3.jpg":"room888/gallery/room888-image3.jpg",
+  })
+  .room
+    .room__description
+      .room__details
+        .room__info
+          h2.sub-title.room__description-title Сведения о номере
+          include ../blocks/room-info/room-info.pug
+          +room-info({комфорт:"Шумопоглощающие стены",
+            удобство:"Окно в каждой из спален",
+            уют:"Номер оснащён камином",
+          })
+        .room__vote
+          h2.sub-title.room__description-title Впечатления от номера
+      .room__comment
+        .room__comment-title.room__description-title
+          h2.sub-title Отзывы посетителей номера
+          span 2 отзыва
+        include ../blocks/comment/comment.pug
+        +comment(
+          {author: 'Мурад Сарафанов',
+          date: '5 дней назад',
+          photo: 'murad.png'},
+          [1,12],
+          'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+          )
+        +comment(
+          {author: 'Патрисия Стёклышкова',
+          date: 'Неделю назад',
+          photo: 'patrice.png'},
+          [0,2],
+          'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+          )
+      .room__conditions
+        .room__rules
+          h2.sub-title.room__description-title Правила
+          include ../blocks/bullet-list/bullet-list.pug
+          +bullet-list([
+            "Нельзя с питомцами",
+            "Без вечеринок и мероприятий",
+            "Время прибытия — после 13:00, а выезд до 12:00",
+          ])
+        .room__cansel
+          h2.sub-title.room__description-title Отмена
+          p Бесплатная отмена в течение 48 ч. 
+          |После этого при отмене не позднее чем за 5 дн. до 
+          |прибытия вы получите полный возврат за вычетом сбора за услуги.
+    .book-room
+      include ../blocks/date-dropdown/date-dropdown_double-range.pug
+      include ../blocks/dropdown-input/dropdown-input.pug
+      form.form(action="#" name="book-room" id="book-room" method="get")
+        .room-card__head
+          span.room-card__number №
+            span.title 888 
+          span.room-card__class-room люкс
+          span.room-card__price
+            b 9990₽ 
+            span.room-card__price-txt в сутки
+        fieldset.form__inner
+          +input-date_double-range(
+            {
+              form:"book-room",
+              classlabel: "label-cta",
+              firstfield:{
+                name:"arrival",
+                id: "first-field-range-date",
+                txtlabel: "прибытие",
+              },
+              secondfield:{
+                name:"departure",
+                id: "second-field-range-date",
+                txtlabel: "выезд",
+              }
+            }
+          )
+        fieldset.form__inner
+          +dropdown-input(
+            "гости",
+            {
+              adult: "взрослые",
+              child: "дети",
+              minichild: "младенцы"
+            },
+            ['очистить', 'применить'],
+            'check',
+            'book-room-guest',
+            'Сколько гостей'
+          )
+        .form__inner
+          .form-book-room__details
+            .form-book-room__details-item
+              .form-book-room__details-description 9900 x 4 суток
+              .form-book-room__details-price 39 960₽
+            .form-book-room__details-item
+              .form-book-room__details-description Сбор за услуги: скидка 2 179₽
+              .form-book-room__details-info i
+              .form-book-room__details-price 0₽
+            .form-book-room__details-item
+              .form-book-room__details-description Сбор за дополнительные услуги
+              .form-book-room__details-info i
+              .form-book-room__details-price 300₽
+          .form-book-room__final-price
+            .sub-title ИТОГО
+            .form-book-room__final-price-line
+            .sub-title 38 081₽
+        <button class="button button_fill button_pointer" type="submit">забронировать</button>
