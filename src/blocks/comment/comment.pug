@@ -4,14 +4,14 @@ mixin comment(comment, like, txt)
   .comment
     .comment__inner
       .comment__author-foto
-        img(src=require("../blocks/comment/"+comment.photo) alt='')
+        img(src=require("images/comment-author/"+comment.photo) alt='')
       .comment__author-name
         strong= comment.author
         br 
         span= comment.date
     .comment__inner
       .comment__like
-        +like-button(like[1],like[1])
+        +like-button(like[0],like[1])
       p.comment__txt= txt
 
 
