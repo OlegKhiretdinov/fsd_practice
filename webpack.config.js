@@ -101,7 +101,8 @@ module.exports = {
       loader: 'pug-loader',
     },
     {
-      test: /\.(png|jpe?g|gif)$/,
+      test: /\.(png|jpe?g|gif|svg)$/,
+      exclude: /\/src\/blocks\/fonts\//,
       use: [
         {
           loader: 'file-loader',
@@ -124,12 +125,12 @@ module.exports = {
     },
     {
       test: /\.svg$/,
+      include: /\/src\/blocks\/fonts\//,
       use: [{
         loader: 'file-loader',
         options: {
-          regExp: /fonts\/([a-z0-9]+)\/[a-z0-9]+\.svg$/,
           name: '[name].[ext]',
-          outputPath: 'svg',
+          outputPath: 'font/',
         },
       },],
     },
