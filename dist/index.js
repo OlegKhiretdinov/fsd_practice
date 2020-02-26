@@ -46875,10 +46875,10 @@ var myChart = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(ctx, {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_air_datepicker_dist_js_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/air-datepicker/dist/js/datepicker */ "./node_modules/air-datepicker/dist/js/datepicker.js");
+/* harmony import */ var _node_modules_air_datepicker_dist_js_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ~/node_modules/air-datepicker/dist/js/datepicker */ "./node_modules/air-datepicker/dist/js/datepicker.js");
 /* harmony import */ var _node_modules_air_datepicker_dist_js_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_air_datepicker_dist_js_datepicker__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _var_www_html_fsd_practice_node_modules_air_datepicker_dist_css_datepicker_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/air-datepicker/dist/css/datepicker.min.css */ "./node_modules/air-datepicker/dist/css/datepicker.min.css");
-/* harmony import */ var _var_www_html_fsd_practice_node_modules_air_datepicker_dist_css_datepicker_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_var_www_html_fsd_practice_node_modules_air_datepicker_dist_css_datepicker_min_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_air_datepicker_dist_css_datepicker_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/node_modules/air-datepicker/dist/css/datepicker.min.css */ "./node_modules/air-datepicker/dist/css/datepicker.min.css");
+/* harmony import */ var _node_modules_air_datepicker_dist_css_datepicker_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_air_datepicker_dist_css_datepicker_min_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _date_dropdown_single_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./date-dropdown_single-range */ "./src/blocks/date-dropdown/date-dropdown_single-range.js");
 /* harmony import */ var _date_dropdown_single_range__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_date_dropdown_single_range__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _date_dropdown_double_range__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./date-dropdown_double-range */ "./src/blocks/date-dropdown/date-dropdown_double-range.js");
