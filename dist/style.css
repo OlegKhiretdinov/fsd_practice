@@ -900,7 +900,7 @@
 @font-face {
   font-family: lg;
   src: url(font/lg.eot);
-  src: url(font/lg.eot?#iefixn1z373) format("embedded-opentype"), url(font/lg.woff) format("woff"), url(font/lg.ttf) format("truetype"), url(svg/lg.svg#lg) format("svg");
+  src: url(font/lg.eot?#iefixn1z373) format("embedded-opentype"), url(font/lg.woff) format("woff"), url(font/lg.ttf) format("truetype"), url(img/lg.svg#lg) format("svg");
   font-weight: 400;
   font-style: normal; }
 
@@ -1784,19 +1784,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @font-face {
   font-family: 'Quicksand';
-  src: url(font/Quicksand-Regular.woff) format("woff"), url(font/Quicksand-Regular.ttf), format("truetype"), url(svg/Quicksand-Regular.svg), format("svg");
+  src: url(font/Quicksand-Regular.woff) format("woff"), url(font/Quicksand-Regular.ttf), format("truetype"), url(font/Quicksand-Regular.svg), format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Montserrat';
-  src: local("Montserrat"), url(font/Montserrat-Regular.woff) format("woff"), url(font/Montserrat-Regular.ttf) format("truetype"), url(svg/Montserrat-Regular.svg) format("svg");
+  src: local("Montserrat"), url(font/Montserrat-Regular.woff) format("woff"), url(font/Montserrat-Regular.ttf) format("truetype"), url(font/Montserrat-Regular.svg) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Montserrat';
-  src: local("Montserrat"), url(font/Montserrat-Bold.woff) format("woff"), url(font/Montserrat-Bold.ttf) format("truetype"), url(svg/Montserrat-Bold.svg) format("svg");
+  src: local("Montserrat"), url(font/Montserrat-Bold.woff) format("woff"), url(font/Montserrat-Bold.ttf) format("truetype"), url(font/Montserrat-Bold.svg) format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -2342,10 +2342,10 @@ nav {
 .like-button__favorite, .like-button__favorite_active {
   width: 50%;
   height: 100%;
-  background: url(svg/favorite.svg) no-repeat center; }
+  background: url(img/favorite.svg) no-repeat center; }
 
 .like-button__favorite_active {
-  background: url(svg/favorite_active.svg) no-repeat center; }
+  background: url(img/favorite_active.svg) no-repeat center; }
 
 .rate-button {
   display: inline-block;
@@ -2356,10 +2356,10 @@ nav {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(svg/star_border.svg) no-repeat center; }
+  background: url(img/star_border.svg) no-repeat center; }
 
 .rate-button__star_fill {
-  background: url(svg/star.svg) no-repeat center; }
+  background: url(img/star.svg) no-repeat center; }
 
 .range-slider {
   display: flex;
