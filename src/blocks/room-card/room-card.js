@@ -3,9 +3,10 @@ import '../../../node_modules/lightslider/dist/js/lightslider.min.js'
 
 $(document).ready(function() {
   $(".light-slider").lightSlider({
+    controls: false,
     item: 1,
     loop: true,
-    pause: 4000,
-    controls: false,
+    mode: 'fade',
+    speed: 1000,
   });
 });
