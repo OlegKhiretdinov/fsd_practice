@@ -7,6 +7,6 @@ $(document).ready(function() {
     item: 1,
     loop: true,
     mode: 'fade',
-    speed: 1000,
+    speed: 500,
   });
 });

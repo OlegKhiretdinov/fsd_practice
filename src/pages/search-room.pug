@@ -5,7 +5,11 @@ prepend head
 
 block content
   .page_search
-    aside.page__sidebar
+    .filter-responsive-triger
+      span.filter-responsive-triger_text
+        |ФИЛЬТРЫ
+      span.filter-responsive-triger_char
+    section.filter-room
       include ../blocks/date-dropdown/date-dropdown_single-range.pug
       +input-date_single-range(
         {
