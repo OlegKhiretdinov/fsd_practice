@@ -1,28 +1,31 @@
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-start;
-  padding: 100px 140px;
+  padding: 6.2% 9%;
   background: white;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .footer__menu {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
-  margin-left: 40px;
 }
 
 .footer__content {
+  flex: 0 0 260px;
   max-width: 260px;
+  padding: 10px;
 }
 
 .footer__content p {
-  margin: 20px 0 25px;
+  padding: 20px 0 25px;
 }
 
 .footer__copyright {
-  padding: 20px 140px;
+  padding: 1.4% 10%;
   border-top: 1px solid $dark_shade_25;
 }
 
