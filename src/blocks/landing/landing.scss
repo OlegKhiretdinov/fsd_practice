@@ -6,9 +6,23 @@
   box-sizing: border-box;
   height: 830px;
   background: bottom url(img/background/landing-bg.jpg);
+  
   &__text {
     align-self: flex-end;
     text-align: right;
   }
 
+}
+
+@media (max-width: 900px) {
+  .landing {
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 2em 2em;
+
+    &__text {
+      align-self: center;
+      text-align: center;
+    }
+  }
 }
