@@ -1,8 +1,18 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const templateFolder = './src/pages/';
+const htmlTemplates = fs.readdirSync(templateFolder)
+  .map((item) => new HtmlWebpackPlugin({
+      template: `${templateFolder}${item}`,
+      filename: `${path.parse(item).name}.html`,
+      inject: true,
+    })
+  );
 
 module.exports = {
   entry: {
@@ -15,63 +25,21 @@ module.exports = {
   resolve: {
     alias: {
       images: path.resolve(__dirname, 'src/img/'),
-      '~': path.resolve(__dirname, '')
+      'node_modules': path.resolve(__dirname, 'node_modules/')
     }
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/color-type.pug',
-      filename: 'color-type.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/ui-form-element.pug',
-      filename: 'ui-form.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/cards.pug',
-      filename: 'cards.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/headers-footers.pug',
-      filename: 'headers-footers.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/landing.pug',
-      filename: 'landing.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/registration.pug',
-      filename: 'registration.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/sign-in.pug',
-      filename: 'sign-in.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/search-room.pug',
-      filename: 'search-room.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/room-details.pug',
-      filename: 'room-details.html',
-      inject: true,
-    }),
+
+    ...htmlTemplates,
+
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
     }),
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
   ],
   devtool: 'source-map',
   devServer: {
