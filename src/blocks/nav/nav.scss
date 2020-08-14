@@ -1,18 +1,25 @@
-nav {
-  margin-left: auto;
+.nav {
+  padding: 10px 0;
+
+  &__list {
+    @extend .menu__list;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+  }
+
+  &__item {
+    @extend .menu__item;
+    flex-shrink: 0;
+    position: relative;
+    margin: 0 15px;
+  }
+
+  &__link {
+    @extend .menu__link;
+  }
 }
 
-.nav__list {
-  @extend .menu__list;
-  display: flex;
-  background: white;
-}
-
-.nav__item {
-  @extend .menu__item;
-  position: relative;
-  margin: 0 15px;
-}
 
 .nav__item:last-child{
   margin-right: 30px;
@@ -41,9 +48,7 @@ nav {
   transform: rotate(45deg);
 }
 
-.nav__link {
-  @extend .menu__link;
-}
+
 
 .nav__item:hover > a,
 .nav__item:hover > span {

@@ -7,12 +7,12 @@ html
   body.page
     .page__inner
       header.header
-        .logo
+        .logo.header__logo
           a(href="/")
             include ../blocks/logo/logo.pug
         block navigation
           include ../blocks/nav/nav.pug
-          nav
+          nav.nav
             +nav({'Home':'#', 'About Us':'#', 'Services':{'Services1':'#', 'Services2':'#', 'Serv':{'serv':'#', 'serv1':'#',}, ser:'#'}, 'Careers':'#', 'News':'#', 'Documentation':'#'})
         block user-login
           include ../blocks/user-login/user-login.pug

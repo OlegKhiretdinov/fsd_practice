@@ -1,12 +1,13 @@
-.header__login-button .button:nth-child(1) {
-  margin-right: 20px;
+.user-login__first-button {
+  display: inline-block;
+  margin: 0 20px;
 }
 
-.header__login-button .button_fill, .header__login-button .button__txt {
+.user-login__button-block .button_fill, .user-login__button-block .button__txt {
   padding: 9px 20px;
 }
 
-.user-logged {
+.user-login__loged {
   padding-left: 30px;
   border-left: 1px solid $dark_shade_25;
   color: $dark_shade_50;

@@ -1,11 +1,13 @@
 include ../button/button_border.pug
 mixin user-login(userName, login, register)
-  if(userName)
-    .user-logged= userName
-  else
-    .header__login-button
-      a(href='#')
-        +button_border('login')
-      a(href='#').button.button_fill= register
+  .user-login
+    if(userName)
+      .user-login__loged= userName
+    else
+      .user-login__button-block
+        .user-login__first-button
+          a(href='#')
+            +button_border('login')
+        a(href='#').button.button_fill= register
 
-//- +user-login('Cosmin Negoita', 'login', 'register')
+//- +user-login('Cosmin Negoita')
