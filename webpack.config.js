@@ -3,7 +3,7 @@ const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const templateFolder = './src/pages/';
 const htmlTemplates = fs.readdirSync(templateFolder)
@@ -39,13 +39,16 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
   ],
+
   devtool: 'source-map',
+
   devServer: {
     stats: 'errors-only',
     contentBase: path.join(__dirname, './dist/')
   },
+  
   module: {
     rules: [{
       test: /\.(s[ac]ss|css)$/,
