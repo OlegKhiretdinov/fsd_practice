@@ -14,7 +14,7 @@ block content
     .room__description
       .room__details
         .room__info
-          h2.sub-title.room__description-title Сведения о номере
+          h2.sub-title Сведения о номере
           include ../blocks/room-info/room-info.pug
           +room-info({комфорт:"Шумопоглощающие стены",
             удобство:"Окно в каждой из спален",
@@ -44,7 +44,7 @@ block content
           )
       .room__conditions
         .room__rules
-          h2.sub-title.room__description-title Правила
+          h2.sub-title.room__rules_title_buletlist Правила
           include ../blocks/bullet-list/bullet-list.pug
           +bullet-list([
             "Нельзя с питомцами",
@@ -52,11 +52,11 @@ block content
             "Время прибытия — после 13:00, а выезд до 12:00",
           ])
         .room__cansel
-          h2.sub-title.room__description-title Отмена
+          h2.sub-title Отмена
           p Бесплатная отмена в течение 48 ч. 
           |После этого при отмене не позднее чем за 5 дн. до 
           |прибытия вы получите полный возврат за вычетом сбора за услуги.
-    .book-room
+    .room__book-form
       include ../blocks/date-dropdown/date-dropdown_double-range.pug
       include ../blocks/dropdown-input/dropdown-input.pug
       form.form(action="#" name="book-room" id="book-room" method="get")

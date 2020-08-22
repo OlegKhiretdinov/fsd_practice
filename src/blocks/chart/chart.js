@@ -29,7 +29,7 @@ var myChart = new Chart(ctx, {
       display: true,
       fontColor: '#BC9CFF',
       fontSize: 24,
-      text: '260 голосов'
+      text: '260 \r голосов',
     },
     legend: {
       position: 'right',
