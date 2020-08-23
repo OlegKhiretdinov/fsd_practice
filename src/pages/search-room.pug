@@ -22,15 +22,13 @@ block content
       include ../blocks/dropdown-input/dropdown-input.pug
       +dropdown-input(
         "гости",
+        "сколько гостей",
         {
           adult: "взрослые",
           child: "дети",
           minichild: "младенцы",
         },
-        ['очистить', 'применить'],
-        'check',
-        'search-room-guest',
-        'сколько гостей'
+        ['очистить', 'применить']
       )
       include ../blocks/range-slider/range-slider.pug
       div
@@ -107,16 +105,14 @@ block content
         )
       div
         +dropdown-input(
+          "удобства",
           "удобства номера",
           {
             bedroom: "спальни",
             bed: "кровати",
             bathroom: "ванные комнать",
           },
-          [],
-          'check',
-          'comfort',
-          'удобства'
+          []
         )
       include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
       +dropdown-checkbox(

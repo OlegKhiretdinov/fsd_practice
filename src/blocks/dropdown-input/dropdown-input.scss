@@ -1,8 +1,31 @@
 .dropdown-input {
-  @extend .input;
   height: auto;
   position: relative;
   color: $text-color;
+
+  &__field {
+    @extend .input;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+
+    &_expand {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: $dark_shade_50;
+    }
+
+    &-char {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid gray;
+      border-right: 2px solid gray;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 @import './__item-list/dropdown-input__item-list.scss';

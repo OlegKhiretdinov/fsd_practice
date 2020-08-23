@@ -23,14 +23,12 @@ form.form(action="#" name="search-room" id="search-room")
   fieldset.form__inner.form__inner_search-room
     +dropdown-input(
       "гости",
+      "Сколько гостей",
       {
         adult: "взрослые",
         child: "дети",
         minichild: "младенцы"
       },
-      ['очистить', 'применить'],
-      'check',
-      'search-room-guest',
-      'Сколько гостей'
+      ['очистить', 'применить']
     )
   <button class="button button_fill button_pointer" type="submit">подобрать номер</button>

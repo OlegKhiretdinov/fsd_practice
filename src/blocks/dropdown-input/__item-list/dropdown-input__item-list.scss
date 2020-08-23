@@ -1,19 +1,13 @@
 .dropdown-input__item-list {
-  width: calc(100% + 2px);
   height: auto;
   margin: 0;
   padding: 0 7px 0 15px;
   box-sizing: border-box;
-  position: absolute;
+  // position: absolute;
   left: -1px;
   top: calc(100% - 3px);
   border-radius: 0 0 4px 4px;
   border: 1px solid $dark_shade_50;
-  display: none;
+  // display: none;
   background: white;
-}
-
-.expand-triger:checked ~ .dropdown-input__item-list {
-  display: block;
-  z-index: 10;
 }

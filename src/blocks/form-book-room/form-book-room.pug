@@ -29,15 +29,13 @@ form.form(action="#" name="book-room" id="book-room" method="get")
   fieldset.form__inner
     +dropdown-input(
       "гости",
+      "Сколько гостей",
       {
         adult: "взрослые",
         child: "дети",
         minichild: "младенцы"
       },
-      ['очистить', 'применить'],
-      'check',
-      'book-room-guest',
-      'Сколько гостей'
+      ['очистить', 'применить']
     )
   .form__inner
     .form-book-room__details
