@@ -1,7 +1,7 @@
 mixin dropdown-input__item(item)
   each label, name in item
     div.dropdown-input__item
-      div= label
+      p= label
       div.dropdown-input__item-inner
         div.dropdown-input__item-count_minus
         input(type="text", name=name, class="dropdown-input__item-count" value="0")

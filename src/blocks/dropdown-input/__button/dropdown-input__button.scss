@@ -7,4 +7,14 @@
   letter-spacing: 0.03em;
   background: transparent;
   border: none;
+
+  &:last-child {
+      color: $main-color;
+    }
+
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px;
+  }
 }
