@@ -1,4 +1,4 @@
-.dropdown-input__item{
+.dropdown-input__item {
   @extend .label-cta;
   display: flex;
   justify-content: space-between;
@@ -16,52 +16,49 @@
     font-weight: bold;
     text-align: center;
     border: none;
-  
-    &_minus {
-      width: 30px;
-      height: 30px;
-      border: 1px solid $dark_shade_50;
-      border-radius: 50%;
-      position: relative;
-  
-      &::before{
-        content: '';
-        width: 6px;
-        position: absolute;
-        top: 15px;
-        border-top: 1px solid $text-color;
-        left: 12px;
-      }
+  }
+
+  &-button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $dark_shade_50;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &-minus::before {
+      content: '';
+      width: 6px;
+      position: absolute;
+      top: 15px;
+      border-top: 1px solid $text-color;
+      left: 12px;
+  }
+
+  &-plus {
+    
+    &::before {
+      content: '';
+      width: 3px;
+      height: 3px;
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      border-bottom: 1px solid $dark_shade_50;
+      border-left: 1px solid $dark_shade_50;
     }
-  
-    &_plus {
-      width: 30px;
-      height: 30px;
-      border: 1px solid $dark_shade_50;
-      border-radius: 50%;
-      position: relative;
-      
-      &::before{
-        content: '';
-        width: 3px;
-        height: 3px;
-        position: absolute;
-        bottom: 14px;
-        left: 14px;
-        border-bottom: 1px solid $dark_shade_50;
-        border-left: 1px solid $dark_shade_50;
-      }
-  
-      &::after {
-        content: '';
-        width: 3px;
-        height: 3px;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        border-top: 1px solid $dark_shade_50;
-        border-right: 1px solid $dark_shade_50;
-      }
+
+    &::after {
+      content: '';
+      width: 3px;
+      height: 3px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border-top: 1px solid $dark_shade_50;
+      border-right: 1px solid $dark_shade_50;
     }
   }
 }
