@@ -1,16 +1,18 @@
-include __button/dropdown-input__button.pug
 include __item/dropdown-input__item.pug
 include ../expand-triger/expand-triger.pug
 
-mixin dropdown-input(label, placeholder, listitem, button)
+mixin dropdown-input(label, placeholder, listitem, hasButton, inputName)
   span.label-cta= label
-  div.dropdown-input
+  div.dropdown-input(data-dnd-input-name = inputName)
     .dropdown-input__field
       span.dropdown-input__field-text= placeholder
       span.dropdown-input__field-char
     .dropdown-input__item-list
       +dropdown-input__item(listitem)
-      +dropdown-input__button(button)
+      if (hasButton)
+        .dropdown-input__button-block
+          button.dropdown-input__button(data-type='clear') очистить
+          button.dropdown-input__button(data-type='accept') применить
 
 //- +dropdown-input(
 //-   "label text",
@@ -20,5 +22,5 @@ mixin dropdown-input(label, placeholder, listitem, button)
 //-     bed: "кровати",
 //-     bathroom: "ванные комнать",
 //-   },
-//-   []
+//-   true
 //- )

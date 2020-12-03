@@ -26,15 +26,26 @@
     position: relative;
     cursor: pointer;
     outline: none;
+
+    &:disabled {
+      cursor: not-allowed;
+      border-color: $dark_shade_25;
+    }
   }
 
-  &-minus::before {
+  &-minus {
+    &::before {
       content: '';
       width: 6px;
       position: absolute;
       top: 15px;
       border-top: 1px solid $text-color;
       left: 12px;
+    }
+
+      &:disabled::before {
+        border-color: $dark_shade_25;
+      }
   }
 
   &-plus {

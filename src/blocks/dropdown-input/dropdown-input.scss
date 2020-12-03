@@ -11,10 +11,10 @@
     padding: 0 1em;
 
     &_expand {
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-color: $dark_shade_50;
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: $dark_shade_50;
     }
 
     &-char {
@@ -32,15 +32,40 @@
     margin: 0;
     padding: 0 7px 0 15px;
     box-sizing: border-box;
-    // position: absolute;
     left: -1px;
     top: calc(100% - 3px);
     border-radius: 0 0 4px 4px;
     border: 1px solid $dark_shade_50;
-    // display: none;
+    display: none;
     background: white;
+
+    &_expand {
+      display: block;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark_shade_50;
+    letter-spacing: 0.03em;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  
+    &:last-child {
+        color: $main-color;
+      }
+  
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 10px;
+    }
   }
 }
 
 @import './__item/dropdown-input__item.scss';
-@import './__button/dropdown-input__button.scss';

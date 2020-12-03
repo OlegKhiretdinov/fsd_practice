@@ -28,7 +28,8 @@ block content
           child: "дети",
           minichild: "младенцы",
         },
-        ['очистить', 'применить']
+        true,
+        'guest'
       )
       include ../blocks/range-slider/range-slider.pug
       div
@@ -112,7 +113,8 @@ block content
             bed: "кровати",
             bathroom: "ванные комнать",
           },
-          []
+          false,
+          'comfort'
         )
       include ../blocks/dropdown-checkbox/dropdown-checkbox.pug
       +dropdown-checkbox(

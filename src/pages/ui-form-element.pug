@@ -62,7 +62,7 @@ html(lang="ru")
               child: "дети",
               minichild: "младенцы",
             },
-            ['очистить', 'применить']
+            true
           )
         .ui-kit__section-inner_m 
           +input-date_single-range(
@@ -260,7 +260,7 @@ html(lang="ru")
               bed: "кровати",
               bathroom: "ванные комнаты"
             },
-            []
+            false
           )
         .ui-kit__section-inner_m(style="width:265px")
           +dropdown-input(
@@ -271,7 +271,7 @@ html(lang="ru")
               bed: "кровати",
               bathroom: "ванные комнаты"
             },
-            []
+            false
           )
         .ui-kit__section-inner_m(style="width:265px")
           +dropdown-checkbox(
@@ -309,15 +309,13 @@ html(lang="ru")
       section.ui-kit__section-vertical
         +dropdown-input(
             "dropdown",
+            "Сколько гостей",
             {
               adult: "взрослые",
               child: "дети",
               minichild: "младенцы",
             },
-            ['применить'],
-            'check',
-            '11',
-            'Сколько гостей'
+            true
           )
         div(style="height:200px;")
         .ui-kit__section-inner_m(style="width:265px")
@@ -353,7 +351,7 @@ html(lang="ru")
               child: "дети",
               minichild: "младенцы",
             },
-            ['очистить', 'применить']
+            true
           )
         div(style="height:200px;")
         p.label-cta bullet list
