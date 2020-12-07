@@ -1,9 +1,9 @@
 .dropdown-checkbox {
-  position: relative;
   background: white;
   
   & .expand-triger__label_check {
     @extend .label-cta;
+    position: relative;
   }
 
   & .expand-triger:checked ~ .expand-triger__label_check:after {
@@ -19,7 +19,6 @@
 
   & .dropdown-checkbox__list {
     display: none;
-    position: absolute;
     left: 0;
     top: 100%;
   }
