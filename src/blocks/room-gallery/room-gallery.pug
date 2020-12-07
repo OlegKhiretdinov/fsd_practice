@@ -1,9 +1,0 @@
-mixin room-gallery(images)
-  ul#room-gallery
-    each img, thumbs in images
-      li(data-thumb=require("images/room/" + thumbs))
-        img(src=require("images/room/" + img))
-
-//- +room-gallery({
-  //- "room888/gallery/room888-thumb-image1.jpg":"room888/gallery/room888-image1.jpg",
-//- })
